@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Service provider account · ISHARA</title>
+  <link rel="stylesheet" href="sign_up.css">
+  <script src="sign_up.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="logo" href="#" aria-label="ISHARA home">ishara<span>.</span></a>
+      <a class="btn btn--ghost" href="#">Sign in</a>
+    </div>
+  </header>
+
+  <main id="main" class="auth">
+    <div class="card" style="width:min(100%,34rem)">
+      <p class="auth__step">Step 2 of 2</p>
+      <h1 id="step2-title">Your details · Service provider</h1>
+
+      <form id="details-form" action="register.php" method="post">
+        <input type="hidden" name="role" value="provider">
+        <div class="error-summary" tabindex="-1" role="alert" hidden></div>
+
+        <div class="field">
+          <label class="field__label" for="name">Full name</label>
+          <input class="input" id="name" name="name" autocomplete="name" required data-error-required="Enter your full name.">
+          <p class="field__error" data-error-for="name" hidden></p>
+        </div>
+
+        <div class="field">
+          <label class="field__label" for="email">Email</label>
+          <input class="input" id="email" name="email" type="email" autocomplete="email" required data-error-required="Enter your email address.">
+          <p class="field__error" data-error-for="email" hidden></p>
+        </div>
+
+        <div class="field">
+          <label class="field__label" for="password">Password</label>
+          <p class="field__hint" id="pw-hint">At least 10 characters.</p>
+          <div class="password-wrap">
+            <input class="input" id="password" name="password" type="password" autocomplete="new-password" minlength="10" required aria-describedby="pw-hint" data-error-required="Create a password." data-error-min="Your password must be at least 10 characters.">
+            <button class="btn btn--secondary password-toggle" type="button" aria-controls="password" aria-pressed="false" aria-label="Show password">Show</button>
+          </div>
+          <p class="field__error" data-error-for="password" hidden></p>
+        </div>
+
+        <div class="field">
+          <label class="field__label" for="confirm">Confirm password</label>
+          <input class="input" id="confirm" type="password" autocomplete="new-password" required data-match="password" data-error-required="Enter your password again." data-error-match="The passwords don't match.">
+          <p class="field__error" data-error-for="confirm" hidden></p>
+        </div>
+
+        <!-- Provider-only fields -->
+        <div class="field">
+          <label class="field__label" for="org">Business or organization name <span class="optional">(optional)</span></label>
+          <input class="input" id="org" name="org">
+        </div>
+
+        <div class="field">
+          <label class="field__label" for="service">Main service</label>
+          <select class="select" id="service" name="service" required data-error-required="Choose your main service.">
+            <option value="">Choose…</option>
+            <option>Captioning &amp; note-taking</option>
+            <option>Tactile / DeafBlind support</option>
+            <option>Document translation</option>
+            <option>Other</option>
+          </select>
+          <p class="field__error" data-error-for="service" hidden></p>
+        </div>
+
+        <div class="field">
+          <label class="field__label" for="city">City</label>
+          <select class="select" id="city" name="city" required data-error-required="Choose your city.">
+            <option value="">Choose…</option>
+            <option>Amman</option><option>Irbid</option><option>Zarqa</option><option>Aqaba</option>
+          </select>
+          <p class="field__error" data-error-for="city" hidden></p>
+        </div>
+
+        <div class="field">
+          <label class="field__label" for="phone">Phone number</label>
+          <input class="input" id="phone" name="phone" type="tel" autocomplete="tel" required data-error-required="Enter a phone number.">
+          <p class="field__error" data-error-for="phone" hidden></p>
+        </div>
+
+        <div class="form-actions">
+          <button class="btn btn--primary btn--lg" type="submit">Create account</button>
+          <a class="btn btn--ghost btn--lg" href="sign_up.html">Back</a>
+        </div>
+      </form>
+
+      <p class="auth__alt">Already have an account? <a href="#">Sign in</a></p>
+    </div>
+  </main>
+</body>
+</html>
