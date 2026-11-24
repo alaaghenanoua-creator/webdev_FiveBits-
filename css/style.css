@@ -1,0 +1,323 @@
+
+/* GENERAL */
+
+body {
+    color: var(--ink);
+    background-color: var(--bg);
+}
+
+
+/* HEADER */
+
+.head {
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 40px;
+    background-color: var(--bg);
+    border-bottom: 1px solid var(--line);
+}
+
+.logo {
+    text-decoration: none;
+    color: var(--brand-900);
+    font-size: 27px;
+    font-weight: bold;
+}
+
+.logo span {
+    background-color: var(--brand-900);
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.right {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--ink);
+}
+
+nav a:hover {
+    color: var(--peach-600);
+}
+
+.login-btn {
+    background-color: var(--brand-600);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+
+/* INTRODUCTION */
+
+.intro {
+    padding: 55px 40px 25px;
+}
+
+.tag {
+    display: inline-block;
+    background-color: var(--peach-300);
+    color: var(--brand-900);
+    padding: 10px 18px;
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+.intro h1 {
+    color: var(--brand-900);
+    font-size: 42px;
+    max-width: 650px;
+    margin: 20px 0 15px;
+}
+
+.intro p {
+    color: var(--ink-soft);
+    font-size: 17px;
+    line-height: 1.7;
+    max-width: 600px;
+}
+
+
+/* SEARCH SECTION */
+
+.search-section {
+    margin: 20px 40px 45px;
+    padding: 25px;
+    background-color: var(--brand-100);
+    border: 1px solid var(--line-soft);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-1);
+}
+
+.search-section h2 {
+    color: var(--brand-900);
+    margin-top: 0;
+}
+
+.filters {
+    display: flex;
+    align-items: end;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.filters div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+}
+
+.filters label {
+    font-weight: bold;
+    font-size: var(--fs-sm);
+}
+
+.filters select {
+    padding: 12px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-sm);
+    background-color: var(--surface);
+    min-width: 130px;
+}
+
+.filters button {
+    background-color: var(--brand-600);
+    color: white;
+    border: none;
+    padding: 13px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.filters button:hover {
+    background-color: var(--brand-700);
+}
+
+
+/* RESULTS */
+
+.results {
+    padding: 0 40px 50px;
+}
+
+.results-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.results-heading h2 {
+    color: var(--brand-900);
+}
+
+.results-heading p {
+    color: var(--ink-soft);
+}
+
+
+/* CARDS */
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.profile-card {
+    background-color: var(--surface);
+    border: 1px solid var(--line);
+    padding: 20px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-1);
+    min-width: 0;
+}
+
+.card-head {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--peach-500);  
+    color: var(--brand-700);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-weight: bold;
+}
+
+.card-head h3 {
+    margin: 0 0 6px;
+    font-size: 17px;
+}
+
+.card-head span {
+    font-size: 13px;
+    color: var(--ink-soft);
+}
+
+.card-info {
+    line-height: 1.5;
+    font-size: 14px;
+    color: var(--ink-soft);
+}
+
+.available {
+    color: var(--ok);
+}
+
+
+/* CARD BUTTONS */
+
+.card-buttons {
+    display: flex;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.card-buttons button {
+    padding: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.outline-btn {
+    background-color: var(--surface);
+    border: 1px solid var(--peach-500);
+    color: var(--line-faint);
+}
+
+.outline-btn:hover {
+    background-color: var(--peach-600);
+}
+
+.main-btn {
+    background-color: var(--peach-300);
+    color: var(--brand-900);
+    border: 1px solid var(--peach-500);
+}
+
+.main-btn:hover {
+    background-color: var(--peach-600);
+}
+
+
+/* HIDE FILTERED CARDS */
+
+.hidden {
+    display: none;
+}
+
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 1000px) {
+
+    .card-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+@media (max-width: 650px) {
+
+    .head {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .right {
+        flex-direction: column;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .intro {
+        padding: 35px 20px;
+    }
+
+    .intro h1 {
+        font-size: 32px;
+    }
+
+    .search-section {
+        margin: 20px;
+    }
+
+    .results {
+        padding: 0 20px 40px;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+
+}

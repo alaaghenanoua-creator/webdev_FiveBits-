@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ishara - Providers</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/theme.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="head">
+
+        <a href="index.html" class="logo">
+            Ishara
+        </a>
+
+        <div class="right">
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="interpreters.html">Interpreters</a>
+                <a href="providers.html">Providers</a>
+                <a href="courses.html">Courses</a>
+            </nav>
+
+            <button class="login-btn">Log in</button>
+        </div>
+
+    </header>
+
+
+    <!-- Page introduction -->
+    <section class="intro">
+
+        <span class="tag">Our service providers</span>
+
+        <h1>Accessible services for everyone.</h1>
+
+        <p>
+            Discover trusted professionals and organizations
+            offering accessible services for deaf and
+            hard-of-hearing people.
+        </p>
+
+    </section>
+
+
+    <!-- Search filters -->
+    <section class="search-section">
+
+        <h2>Find a service provider</h2>
+
+        <div class="filters">
+
+            <div>
+                <label for="provider-city">Location</label>
+                <select name="provider-city" id="city" required>
+                    <option value="" disabled selected>All cities</option>
+                    <option value=""></option>
+                </select>
+            </div>
+
+            <div>
+                <label for="category">Category</label>
+                <select id="category">
+                    <option value="">All categories</option>
+                    <option value="medical">Medical</option>
+                    <option value="education">Education</option>
+                    <option value="legal">Legal</option>
+                    <option value="social">Social services</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="provider-mode">Service mode</label>
+                <select id="provider-mode">
+                    <option value="">All modes</option>
+                    <option value="person">In person</option>
+                    <option value="online">Online</option>
+                </select>
+            </div>
+
+            <button type="button" onclick="filterProviders()">
+                Find provider
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- Provider cards -->
+    <section class="results">
+
+        <div class="results-heading">
+            <h2>Our providers</h2>
+            <p id="provider-count">3 providers found</p>
+        </div>
+
+        <div class="card-grid" id="provider-grid">
+
+            
+        </div>
+
+    </section>
+
+
+    <script src="js/script.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/providers.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ishara-Interpreters</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/theme.css">
+
+</head>
+
+<body>
+    <header class="head">
+        <a href="index.html" class="logo">
+            Ishara
+        </a>
+        <div class="right">
+            <nav>
+                <a href="index.html">home</a>
+                <a href="interpreters.html">interpreters</a>
+                <a href="providers.html">providers</a>
+                <a href="courses.html">courses</a>
+            </nav>
+            <button class="login-btn">Log in</button>
+        </div>
+    </header>
+    
+    <section class="intro">
+
+        <span class="tag">Our Interpreters</span>
+
+        <h1>Find a qualified interpreter, on your terms.</h1>
+
+        <p>Sign-language interpreters & service professionals</p>
+        
+    </section>
+    <section class="search-section">
+        <h2>find an interpreter</h2>
+        <div class="filters">
+            <div>
+                <label for="city"></label>
+                <select name="city" id="city" required>
+                    <option value="" disabled selected>WHERE</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="date"></label>
+                <select name="date" id="date">
+                    <option value="" disabled selected>WHEN</option>
+                    <option value="day">Today</option>
+                    <option value="week">This week</option>
+                    <option value="month">This month</option>
+                </select>
+            </div>
+            <div>
+                <label for="mode"></label>
+                <select name="mode" id="mode">
+                    <option value="" disabled selected>HOW</option>
+                    <option value="person">In person</option>
+                    <option value="online">Online</option>
+                </select>
+            </div>
+            <div>
+                <label for="gen"></label>
+                <select name="gen" id="gen">
+                    <option value="" disabled selected>WHO</option>
+                    <option value="F">Female</option>
+                    <option value="M">Male</option>
+                </select>
+            </div>
+
+            <label for="button"></label>
+            <button type="button" onclick="filterInterpreters()">Find interpreter</button>
+        </div>
+    </section>
+
+    <section class="results">
+        <div class="results-heading">
+            <h2>available interpreters</h2>
+            <p id="interpreter-count"> 3 interpreter found</p> <!--use it with js get element by id-->
+        </div>
+        <div id="interpreter-grid" class="card-grid">
+            
+        </div>
+    </section>
+
+    <script src="js/script.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/interpreters.js"></script>
+</body>
+
+</html>
