@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ishara connects deaf and hard-of-hearing people in Algeria with accessible services, sign language interpreters and learning opportunities.">
+  <meta name="theme-color" content="#faf6f0">
+  <title>Ishara — Access without barriers</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-wrap">
+      <a href="#home" class="brand">
+        <img src="images/logo.png" alt="Ishara logo" class="site-logo" width="48" height="48">
+        <span>ISHARA</span>
+      </a>
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+        <a class="nav-link active" href="#home" aria-current="true">Home</a>
+        <a class="nav-link" href="#how-it-works">How it works</a>
+        <a class="nav-link" href="#interpreters">Interpreters</a>
+        <a class="nav-link" href="#providers">Providers</a>
+        <a class="nav-link" href="#courses">Courses</a>
+        <span class="nav-indicator" id="navIndicator" aria-hidden="true"></span>
+      </nav>
+      <div class="nav-actions">
+        <a class="login-link" href="../loginpage/login.html">Log in</a>
+        <a class="btn btn-primary" href="../loginpage/login.html">Sign up <span aria-hidden="true">↗</span></a>
+      </div>
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mobileNav" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+      <a href="#home">Home</a>
+      <a href="#how-it-works">How it works</a>
+      <a href="#interpreters">Interpreters</a>
+      <a href="#providers">Providers</a>
+      <a href="#courses">Courses</a>
+      <div class="mobile-nav-actions">
+        <a class="btn btn-outline" href="../loginpage/login.html">Log in</a>
+        <a class="btn btn-primary" href="../loginpage/login.html">Sign up <span aria-hidden="true">↗</span></a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ 1. HOME / HERO ============ -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <h1 data-reveal style="--d:60ms">Access to services shouldn’t depend on <em>hearing.</em></h1>
+          <p class="hero-lead" data-reveal style="--d:120ms">Ishara — Arabic for “sign” — connects deaf and hard-of-hearing people in Algeria with accessible services, sign language interpreters, and opportunities to learn. One platform, so nobody is left out of the conversation.</p>
+          <div class="hero-actions" data-reveal style="--d:180ms">
+            <a class="btn btn-primary btn-lg" href="#how-it-works">Explore services <span aria-hidden="true">↗</span></a>
+            <a class="btn btn-outline btn-lg" href="../loginpage/login.html">Join Us</a>
+          </div>
+          <div class="hero-note" data-reveal style="--d:240ms">
+            <span class="note-icon" aria-hidden="true">✳</span>
+            <span>Services, interpreters and learning — one place, zero barriers.</span>
+          </div>
+        </div>
+
+        <!-- Hero visual: a hand signs, Ishara makes it understood -->
+        <div class="hero-art" aria-hidden="true">
+          <p class="visually-hidden">Animation: a hand signs “Hello” and a caption turns it into written words.</p>
+          <div class="sign-stage">
+            <span class="stage-glow"></span>
+            <span class="stage-ring"></span>
+
+            <div class="demo-card">
+              <div class="demo-card-top">
+                <span class="live-dot"></span>
+                <span class="sig-dots"><i></i><i></i><i></i></span>
+              </div>
+              <div class="sign-hand-zone">
+                <svg class="hand-svg" viewBox="0 0 240 234" fill="none">
+                  <!-- signal arcs -->
+                  <g class="sig-arcs">
+                    <path d="M170 52 a26 26 0 0 1 18 10"/>
+                    <path d="M176 34 a44 44 0 0 1 30 16"/>
+                    <path d="M182 16 a62 62 0 0 1 42 22"/>
+                  </g>
+                  <!-- waving hand: open palm, drawn with real hand proportions -->
+                  <g class="hand"><defs><linearGradient id="hero-skin" gradientUnits="userSpaceOnUse" x1="70" y1="30" x2="170" y2="210"><stop offset="0" stop-color="#f4b99f"/><stop offset=".55" stop-color="#e08a6d"/><stop offset="1" stop-color="#d27a5c"/></linearGradient></defs><defs><linearGradient id="hero-sh" gradientUnits="userSpaceOnUse" x1="104" y1="0" x2="168" y2="0"><stop offset="0" stop-color="#c96f52" stop-opacity="0"/><stop offset="1" stop-color="#c96f52" stop-opacity=".38"/></linearGradient><radialGradient id="hero-hi" gradientUnits="userSpaceOnUse" cx="108" cy="164" r="30"><stop offset="0" stop-color="#fff" stop-opacity=".28"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient></defs><path d="M97 208 C95 196 88 184 84 170 C80 156 86 146 92 140 C92 128 94 116 102 111 L158 115 C170 122 169 138 164 154 C159 172 152 190 148 208Z" fill="url(#hero-skin)" stroke="#a9543c" stroke-width="1.9" stroke-linejoin="round"/><g class="f-thumb"><path d="M89.4 181.4 L85.7 178.8 L82.3 176.3 L78.9 173.8 L75.4 171.4 L71.9 169 L68.3 166.7 L64.7 164.5 L61 162.4 L57.2 160.3 L53.4 158.2 L49.5 156.3 L45.6 154.4 L41.6 152.6 L37.5 150.8 L33.4 149.1 L29.2 147.5 A8.5 8.5 0 0 1 34.2 131.3 L38.9 132.5 L43.5 133.7 L48.1 135.1 L52.6 136.6 L57.1 138.1 L61.5 139.7 L66 141.4 L70.3 143.2 L74.7 145.1 L78.9 147 L83.2 149.1 L87.4 151.2 L91.6 153.4 L95.7 155.7 L99.7 158.1 L103.3 160.6Z" fill="url(#hero-skin)" stroke="#a9543c" stroke-width="1.9" stroke-linejoin="round"/><path d="M98 168.5 L94.4 166 L90.6 163.5 L86.7 161.2 L82.8 158.9 L78.9 156.7 L74.9 154.5 L70.9 152.5 L66.8 150.5 L62.6 148.6 L58.4 146.8 L54.2 145 L49.9 143.3 L45.6 141.7 L41.2 140.2 L36.8 138.8 L32.3 137.4 L34.2 131.3 L38.9 132.5 L43.5 133.7 L48.1 135.1 L52.6 136.6 L57.1 138.1 L61.5 139.7 L66 141.4 L70.3 143.2 L74.7 145.1 L78.9 147 L83.2 149.1 L87.4 151.2 L91.6 153.4 L95.7 155.7 L99.7 158.1 L103.3 160.6Z" fill="#c96f52" opacity=".28"/><g fill="none" stroke="#a9543c" stroke-width="1.1" stroke-linecap="round" opacity=".38"><path d="M59.6 157 Q61.7 150.6 66.9 146.2"/></g></g><g class="f-pinky"><path d="M146.9 138.3 L148.2 134.3 L149.6 130.3 L151 126.3 L152.5 122.3 L154 118.3 L155.6 114.3 L157.2 110.4 L158.8 106.5 L160.5 102.6 L162.2 98.6 L163.9 94.8 L165.7 90.9 L167.5 87 L169.3 83.2 L171.2 79.3 L173.1 75.5 A6.5 6.5 0 0 1 184.8 81.1 L183.2 84.9 L181.5 88.7 L179.9 92.5 L178.4 96.4 L176.8 100.2 L175.3 104.1 L173.9 107.9 L172.4 111.8 L171 115.7 L169.7 119.6 L168.3 123.5 L167.1 127.4 L165.8 131.3 L164.6 135.3 L163.4 139.2 L162.1 143.2Z" fill="url(#hero-skin)" stroke="#a9543c" stroke-width="1.9" stroke-linejoin="round"/><path d="M156.3 141.3 L157.6 137.3 L158.9 133.4 L160.2 129.4 L161.5 125.5 L162.9 121.5 L164.3 117.6 L165.8 113.7 L167.3 109.8 L168.8 105.9 L170.3 102 L171.9 98.1 L173.5 94.3 L175.2 90.4 L176.9 86.6 L178.6 82.8 L180.4 78.9 L184.8 81.1 L183.2 84.9 L181.5 88.7 L179.9 92.5 L178.4 96.4 L176.8 100.2 L175.3 104.1 L173.9 107.9 L172.4 111.8 L171 115.7 L169.7 119.6 L168.3 123.5 L167.1 127.4 L165.8 131.3 L164.6 135.3 L163.4 139.2 L162.1 143.2Z" fill="#c96f52" opacity=".28"/><g fill="none" stroke="#a9543c" stroke-width="1.1" stroke-linecap="round" opacity=".38"><path d="M158.5 114.7 Q163.4 114.9 167.4 117.5"/><path d="M166.2 96.3 Q170.7 96.5 174.4 99"/></g></g><g class="f-ring"><path d="M130.9 129.7 L131.4 124.1 L132.2 118.4 L132.9 112.7 L133.7 107.1 L134.5 101.5 L135.3 95.8 L136.1 90.2 L136.9 84.5 L137.8 78.9 L138.7 73.3 L139.6 67.6 L140.5 62 L141.4 56.4 L142.4 50.8 L143.4 45.1 L144.4 39.5 A7.5 7.5 0 0 1 159.2 41.8 L158.5 47.4 L157.8 53 L157.1 58.6 L156.4 64.2 L155.8 69.9 L155.2 75.5 L154.6 81.1 L154 86.7 L153.4 92.3 L152.8 97.9 L152.3 103.6 L151.8 109.2 L151.3 114.8 L150.8 120.4 L150.3 126 L149.8 131.7Z" fill="url(#hero-skin)" stroke="#a9543c" stroke-width="1.9" stroke-linejoin="round"/><path d="M142.6 130.9 L143.2 125.3 L143.7 119.6 L144.3 114 L144.9 108.4 L145.5 102.8 L146.2 97.1 L146.8 91.5 L147.5 85.9 L148.2 80.3 L148.9 74.6 L149.6 69 L150.4 63.4 L151.1 57.8 L151.9 52.2 L152.7 46.6 L153.5 40.9 L159.2 41.8 L158.5 47.4 L157.8 53 L157.1 58.6 L156.4 64.2 L155.8 69.9 L155.2 75.5 L154.6 81.1 L154 86.7 L153.4 92.3 L152.8 97.9 L152.3 103.6 L151.8 109.2 L151.3 114.8 L150.8 120.4 L150.3 126 L149.8 131.7Z" fill="#c96f52" opacity=".28"/><g fill="none" stroke="#a9543c" stroke-width="1.1" stroke-linecap="round" opacity=".38"><path d="M138.8 95 Q144.4 94.1 149.7 96.2"/><path d="M142.6 68.4 Q147.8 67.5 152.7 69.5"/></g></g><g class="f-index"><path d="M94.4 131.8 L93.7 126.2 L93.1 120.6 L92.5 115 L91.9 109.4 L91.3 103.8 L90.7 98.1 L90 92.5 L89.4 86.9 L88.7 81.3 L88 75.7 L87.3 70.1 L86.5 64.5 L85.8 58.9 L85 53.3 L84.2 47.7 L83.4 42.1 A7.5 7.5 0 0 1 98.2 39.6 L99.3 45.2 L100.3 50.8 L101.4 56.4 L102.4 62 L103.4 67.6 L104.4 73.2 L105.4 78.8 L106.4 84.5 L107.3 90.1 L108.2 95.7 L109.1 101.3 L110 107 L110.9 112.6 L111.7 118.2 L112.6 123.9 L113.2 129.5Z" fill="url(#hero-skin)" stroke="#a9543c" stroke-width="1.9" stroke-linejoin="round"/><path d="M106.1 130.4 L105.4 124.8 L104.7 119.1 L103.9 113.5 L103.2 107.9 L102.4 102.3 L101.6 96.6 L100.7 91 L99.9 85.4 L99.1 79.8 L98.2 74.2 L97.3 68.6 L96.4 63 L95.4 57.4 L94.5 51.8 L93.5 46.2 L92.6 40.6 L98.2 39.6 L99.3 45.2 L100.3 50.8 L101.4 56.4 L102.4 62 L103.4 67.6 L104.4 73.2 L105.4 78.8 L106.4 84.5 L107.3 90.1 L108.2 95.7 L109.1 101.3 L110 107 L110.9 112.6 L111.7 118.2 L112.6 123.9 L113.2 129.5Z" fill="#c96f52" opacity=".28"/><g fill="none" stroke="#a9543c" stroke-width="1.1" stroke-linecap="round" opacity=".38"><path d="M93.9 96.3 Q99.1 94.2 104.7 95"/><path d="M90.3 69.7 Q95.2 67.7 100.4 68.5"/></g></g><g class="f-middle"><path d="M112 127.5 L112 121.2 L112.1 114.8 L112.2 108.5 L112.4 102.1 L112.5 95.8 L112.7 89.5 L112.8 83.1 L112.9 76.8 L113.1 70.4 L113.2 64.1 L113.3 57.7 L113.5 51.4 L113.6 45 L113.7 38.7 L113.9 32.3 L114 26 A8 8 0 0 1 130 26 L130.1 32.3 L130.3 38.7 L130.4 45 L130.5 51.4 L130.7 57.7 L130.8 64.1 L130.9 70.4 L131.1 76.8 L131.2 83.1 L131.3 89.5 L131.5 95.8 L131.6 102.1 L131.8 108.5 L131.9 114.8 L132 121.2 L132 127.5Z" fill="url(#hero-skin)" stroke="#a9543c" stroke-width="1.9" stroke-linejoin="round"/><path d="M124.4 127.5 L124.4 121.2 L124.4 114.8 L124.3 108.5 L124.3 102.1 L124.3 95.8 L124.2 89.5 L124.2 83.1 L124.2 76.8 L124.1 70.4 L124.1 64.1 L124.1 57.7 L124 51.4 L124 45 L124 38.7 L124 32.3 L123.9 26 L130 26 L130.1 32.3 L130.3 38.7 L130.4 45 L130.5 51.4 L130.7 57.7 L130.8 64.1 L130.9 70.4 L131.1 76.8 L131.2 83.1 L131.3 89.5 L131.5 95.8 L131.6 102.1 L131.8 108.5 L131.9 114.8 L132 121.2 L132 127.5Z" fill="#c96f52" opacity=".28"/><g fill="none" stroke="#a9543c" stroke-width="1.1" stroke-linecap="round" opacity=".38"><path d="M116.2 88 Q122 86.4 127.8 88"/><path d="M116.6 58 Q122 56.5 127.4 58"/></g></g><path d="M92 146 C91 130 95 117 104 113 L157 117 C168 123 167 138 162 150 L150 168 L98 176 C92 168 89 156 92 146Z" fill="url(#hero-skin)"/><path d="M104 126 L162 126 L166 140 L160 170 L148 208 L104 208Z" fill="url(#hero-sh)"/><circle cx="108" cy="164" r="30" fill="url(#hero-hi)"/><g fill="none" stroke="#a9543c" stroke-width="1.3" stroke-linecap="round" opacity=".4"><path d="M97 148 C113 141 135 141 160 148"/><path d="M104 152 C101 168 110 182 124 192"/><path d="M112 136 C126 132 141 133 156 138" opacity=".55"/><path d="M108 204 C118 207 130 207 140 204" opacity=".5"/></g><path d="M92 200 H154 L157 226 Q157 230 153 230 H93 Q89 230 89 226Z" fill="#1c5a80"/><rect x="88" y="198" width="70" height="10" rx="5" fill="#2274a5"/><path d="M100 210 V224 M146 210 V224" stroke="#14486a" stroke-width="1.4" stroke-linecap="round" opacity=".5"/></g>
+                </svg>
+              </div>
+              <div class="sign-caption">
+                <span class="cap-tag">SIGNED</span>
+                <span class="cap-arrow" aria-hidden="true">→</span>
+                <span class="cap-text" id="capText">“Hello!”</span>
+                <span class="cap-tag cap-tag-right">WRITTEN</span>
+              </div>
+            </div>
+
+            <div class="understand-chip" id="understandChip">
+              <span class="uc-check" aria-hidden="true">✓</span>
+              <span>Understood</span>
+            </div>
+            <div class="friend-chip">
+              <svg class="mini-hand" viewBox="40 10 160 212" aria-hidden="true"><defs><linearGradient id="mini-skin" gradientUnits="userSpaceOnUse" x1="70" y1="30" x2="170" y2="210"><stop offset="0" stop-color="#f4b99f"/><stop offset=".55" stop-color="#e08a6d"/><stop offset="1" stop-color="#d27a5c"/></linearGradient></defs><defs><linearGradient id="mini-sh" gradientUnits="userSpaceOnUse" x1="104" y1="0" x2="168" y2="0"><stop offset="0" stop-color="#c96f52" stop-opacity="0"/><stop offset="1" stop-color="#c96f52" stop-opacity=".38"/></linearGradient><radialGradient id="mini-hi" gradientUnits="userSpaceOnUse" cx="108" cy="164" r="30"><stop offset="0" stop-color="#fff" stop-opacity=".28"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient></defs><path d="M97 208 C95 196 88 184 84 170 C80 156 86 146 92 140 C92 128 94 116 102 111 L158 115 C170 122 169 138 164 154 C159 172 152 190 148 208Z" fill="url(#mini-skin)" stroke="#a9543c" stroke-width="6.5" stroke-linejoin="round"/><g class="f-thumb"><path d="M89.4 181.4 L85.7 178.8 L82.3 176.3 L78.9 173.8 L75.4 171.4 L71.9 169 L68.3 166.7 L64.7 164.5 L61 162.4 L57.2 160.3 L53.4 158.2 L49.5 156.3 L45.6 154.4 L41.6 152.6 L37.5 150.8 L33.4 149.1 L29.2 147.5 A8.5 8.5 0 0 1 34.2 131.3 L38.9 132.5 L43.5 133.7 L48.1 135.1 L52.6 136.6 L57.1 138.1 L61.5 139.7 L66 141.4 L70.3 143.2 L74.7 145.1 L78.9 147 L83.2 149.1 L87.4 151.2 L91.6 153.4 L95.7 155.7 L99.7 158.1 L103.3 160.6Z" fill="url(#mini-skin)" stroke="#a9543c" stroke-width="6.5" stroke-linejoin="round"/><path d="M98 168.5 L94.4 166 L90.6 163.5 L86.7 161.2 L82.8 158.9 L78.9 156.7 L74.9 154.5 L70.9 152.5 L66.8 150.5 L62.6 148.6 L58.4 146.8 L54.2 145 L49.9 143.3 L45.6 141.7 L41.2 140.2 L36.8 138.8 L32.3 137.4 L34.2 131.3 L38.9 132.5 L43.5 133.7 L48.1 135.1 L52.6 136.6 L57.1 138.1 L61.5 139.7 L66 141.4 L70.3 143.2 L74.7 145.1 L78.9 147 L83.2 149.1 L87.4 151.2 L91.6 153.4 L95.7 155.7 L99.7 158.1 L103.3 160.6Z" fill="#c96f52" opacity=".28"/><g fill="none" stroke="#a9543c" stroke-width="3.9" stroke-linecap="round" opacity=".38"><path d="M59.6 157 Q61.7 150.6 66.9 146.2"/></g></g><g class="f-pinky"><path d="M146.9 138.3 L148.2 134.3 L149.6 130.3 L151 126.3 L152.5 122.3 L154 118.3 L155.6 114.3 L157.2 110.4 L158.8 106.5 L160.5 102.6 L162.2 98.6 L163.9 94.8 L165.7 90.9 L167.5 87 L169.3 83.2 L171.2 79.3 L173.1 75.5 A6.5 6.5 0 0 1 184.8 81.1 L183.2 84.9 L181.5 88.7 L179.9 92.5 L178.4 96.4 L176.8 100.2 L175.3 104.1 L173.9 107.9 L172.4 111.8 L171 115.7 L169.7 119.6 L168.3 123.5 L167.1 127.4 L165.8 131.3 L164.6 135.3 L163.4 139.2 L162.1 143.2Z" fill="url(#mini-skin)" stroke="#a9543c" stroke-width="6.5" stroke-linejoin="round"/><path d="M156.3 141.3 L157.6 137.3 L158.9 133.4 L160.2 129.4 L161.5 125.5 L162.9 121.5 L164.3 117.6 L165.8 113.7 L167.3 109.8 L168.8 105.9 L170.3 102 L171.9 98.1 L173.5 94.3 L175.2 90.4 L176.9 86.6 L178.6 82.8 L180.4 78.9 L184.8 81.1 L183.2 84.9 L181.5 88.7 L179.9 92.5 L178.4 96.4 L176.8 100.2 L175.3 104.1 L173.9 107.9 L172.4 111.8 L171 115.7 L169.7 119.6 L168.3 123.5 L167.1 127.4 L165.8 131.3 L164.6 135.3 L163.4 139.2 L162.1 143.2Z" fill="#c96f52" opacity=".28"/><g fill="none" stroke="#a9543c" stroke-width="3.9" stroke-linecap="round" opacity=".38"><path d="M158.5 114.7 Q163.4 114.9 167.4 117.5"/><path d="M166.2 96.3 Q170.7 96.5 174.4 99"/></g></g><g class="f-ring"><path d="M130.9 129.7 L131.4 124.1 L132.2 118.4 L132.9 112.7 L133.7 107.1 L134.5 101.5 L135.3 95.8 L136.1 90.2 L136.9 84.5 L137.8 78.9 L138.7 73.3 L139.6 67.6 L140.5 62 L141.4 56.4 L142.4 50.8 L143.4 45.1 L144.4 39.5 A7.5 7.5 0 0 1 159.2 41.8 L158.5 47.4 L157.8 53 L157.1 58.6 L156.4 64.2 L155.8 69.9 L155.2 75.5 L154.6 81.1 L154 86.7 L153.4 92.3 L152.8 97.9 L152.3 103.6 L151.8 109.2 L151.3 114.8 L150.8 120.4 L150.3 126 L149.8 131.7Z" fill="url(#mini-skin)" stroke="#a9543c" stroke-width="6.5" stroke-linejoin="round"/><path d="M142.6 130.9 L143.2 125.3 L143.7 119.6 L144.3 114 L144.9 108.4 L145.5 102.8 L146.2 97.1 L146.8 91.5 L147.5 85.9 L148.2 80.3 L148.9 74.6 L149.6 69 L150.4 63.4 L151.1 57.8 L151.9 52.2 L152.7 46.6 L153.5 40.9 L159.2 41.8 L158.5 47.4 L157.8 53 L157.1 58.6 L156.4 64.2 L155.8 69.9 L155.2 75.5 L154.6 81.1 L154 86.7 L153.4 92.3 L152.8 97.9 L152.3 103.6 L151.8 109.2 L151.3 114.8 L150.8 120.4 L150.3 126 L149.8 131.7Z" fill="#c96f52" opacity=".28"/><g fill="none" stroke="#a9543c" stroke-width="3.9" stroke-linecap="round" opacity=".38"><path d="M138.8 95 Q144.4 94.1 149.7 96.2"/><path d="M142.6 68.4 Q147.8 67.5 152.7 69.5"/></g></g><g class="f-index"><path d="M94.4 131.8 L93.7 126.2 L93.1 120.6 L92.5 115 L91.9 109.4 L91.3 103.8 L90.7 98.1 L90 92.5 L89.4 86.9 L88.7 81.3 L88 75.7 L87.3 70.1 L86.5 64.5 L85.8 58.9 L85 53.3 L84.2 47.7 L83.4 42.1 A7.5 7.5 0 0 1 98.2 39.6 L99.3 45.2 L100.3 50.8 L101.4 56.4 L102.4 62 L103.4 67.6 L104.4 73.2 L105.4 78.8 L106.4 84.5 L107.3 90.1 L108.2 95.7 L109.1 101.3 L110 107 L110.9 112.6 L111.7 118.2 L112.6 123.9 L113.2 129.5Z" fill="url(#mini-skin)" stroke="#a9543c" stroke-width="6.5" stroke-linejoin="round"/><path d="M106.1 130.4 L105.4 124.8 L104.7 119.1 L103.9 113.5 L103.2 107.9 L102.4 102.3 L101.6 96.6 L100.7 91 L99.9 85.4 L99.1 79.8 L98.2 74.2 L97.3 68.6 L96.4 63 L95.4 57.4 L94.5 51.8 L93.5 46.2 L92.6 40.6 L98.2 39.6 L99.3 45.2 L100.3 50.8 L101.4 56.4 L102.4 62 L103.4 67.6 L104.4 73.2 L105.4 78.8 L106.4 84.5 L107.3 90.1 L108.2 95.7 L109.1 101.3 L110 107 L110.9 112.6 L111.7 118.2 L112.6 123.9 L113.2 129.5Z" fill="#c96f52" opacity=".28"/><g fill="none" stroke="#a9543c" stroke-width="3.9" stroke-linecap="round" opacity=".38"><path d="M93.9 96.3 Q99.1 94.2 104.7 95"/><path d="M90.3 69.7 Q95.2 67.7 100.4 68.5"/></g></g><g class="f-middle"><path d="M112 127.5 L112 121.2 L112.1 114.8 L112.2 108.5 L112.4 102.1 L112.5 95.8 L112.7 89.5 L112.8 83.1 L112.9 76.8 L113.1 70.4 L113.2 64.1 L113.3 57.7 L113.5 51.4 L113.6 45 L113.7 38.7 L113.9 32.3 L114 26 A8 8 0 0 1 130 26 L130.1 32.3 L130.3 38.7 L130.4 45 L130.5 51.4 L130.7 57.7 L130.8 64.1 L130.9 70.4 L131.1 76.8 L131.2 83.1 L131.3 89.5 L131.5 95.8 L131.6 102.1 L131.8 108.5 L131.9 114.8 L132 121.2 L132 127.5Z" fill="url(#mini-skin)" stroke="#a9543c" stroke-width="6.5" stroke-linejoin="round"/><path d="M124.4 127.5 L124.4 121.2 L124.4 114.8 L124.3 108.5 L124.3 102.1 L124.3 95.8 L124.2 89.5 L124.2 83.1 L124.2 76.8 L124.1 70.4 L124.1 64.1 L124.1 57.7 L124 51.4 L124 45 L124 38.7 L124 32.3 L123.9 26 L130 26 L130.1 32.3 L130.3 38.7 L130.4 45 L130.5 51.4 L130.7 57.7 L130.8 64.1 L130.9 70.4 L131.1 76.8 L131.2 83.1 L131.3 89.5 L131.5 95.8 L131.6 102.1 L131.8 108.5 L131.9 114.8 L132 121.2 L132 127.5Z" fill="#c96f52" opacity=".28"/><g fill="none" stroke="#a9543c" stroke-width="3.9" stroke-linecap="round" opacity=".38"><path d="M116.2 88 Q122 86.4 127.8 88"/><path d="M116.6 58 Q122 56.5 127.4 58"/></g></g><path d="M92 146 C91 130 95 117 104 113 L157 117 C168 123 167 138 162 150 L150 168 L98 176 C92 168 89 156 92 146Z" fill="url(#mini-skin)"/><path d="M104 126 L162 126 L166 140 L160 170 L148 208 L104 208Z" fill="url(#mini-sh)"/><circle cx="108" cy="164" r="30" fill="url(#mini-hi)"/><g fill="none" stroke="#a9543c" stroke-width="1.3" stroke-linecap="round" opacity=".4"><path d="M97 148 C113 141 135 141 160 148"/><path d="M104 152 C101 168 110 182 124 192"/><path d="M112 136 C126 132 141 133 156 138" opacity=".55"/><path d="M108 204 C118 207 130 207 140 204" opacity=".5"/></g><path d="M92 200 H154 L158 222 H88Z" fill="#1c5a80"/><rect x="88" y="198" width="70" height="10" rx="5" fill="#2274a5"/><path d="M100 210 V216 M146 210 V216" stroke="#14486a" stroke-width="1.4" stroke-linecap="round" opacity=".5"/></svg>
+              <span>For deaf &amp; hard-of-hearing people</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-bottom container">
+        <span>ONE PLATFORM, MORE WAYS TO CONNECT</span>
+        <div class="hero-bottom-line"></div>
+        <span class="scroll-hint">SCROLL TO EXPLORE <span aria-hidden="true">↓</span></span>
+      </div>
+    </section>
+
+    <!-- ============ 2. HOW IT WORKS (nav order #2) ============ -->
+    <section class="how-section section-pad" id="how-it-works">
+      <div class="container">
+        <div class="section-heading heading-center" data-reveal>
+          <span class="eyebrow"><span class="eyebrow-dot"></span> HOW ISHARA WORKS</span>
+          <h2>Simple, by <em>design.</em></h2>
+          <p>No maze of menus, no dead ends. This is exactly what happens when someone uses Ishara.</p>
+        </div>
+        <div class="how-steps">
+          <article class="step" data-reveal>
+            <div class="step-node">
+              <span class="step-ico" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M18 11V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2"/><path d="M14 10V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v2"/><path d="M10 10.5V6a2 2 0 0 0-2-2a2 2 0 0 0-2 2v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></svg></span>
+              <span class="step-num">01</span>
+            </div>
+            <h3>Need an interpreter?</h3>
+            <p class="step-brief">Find sign-language interpreters for appointments, important conversations, and everyday situations.</p>
+            <div class="step-detail">
+              <div>
+                <p>Browse interpreter profiles, see who is available, and choose the person who fits your situation.</p>
+                <div class="step-chips"><span>Appointments</span><span>Conversations</span><span>Everyday</span></div>
+              </div>
+            </div>
+            <span class="step-link" aria-hidden="true"></span>
+          </article>
+          <article class="step" data-reveal style="--d:90ms">
+            <div class="step-node">
+              <span class="step-ico" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span>
+              <span class="step-num">02</span>
+            </div>
+            <h3>Want to learn sign language?</h3>
+            <p class="step-brief">Discover courses, explore a new language, and start learning at your own pace.</p>
+            <div class="step-detail">
+              <div>
+                <p>Beginner-friendly content comes first, so you can start from zero and keep going at your own speed.</p>
+                <div class="step-chips"><span>Courses</span><span>Beginner-friendly</span><span>Your pace</span></div>
+              </div>
+            </div>
+            <span class="step-link" aria-hidden="true"></span>
+          </article>
+          <article class="step" data-reveal style="--d:180ms">
+            <div class="step-node">
+              <span class="step-ico" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M2 3h20"/><path d="M21 3v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V3"/><path d="m7 21 5-5 5 5"/></svg></span>
+              <span class="step-num">03</span>
+            </div>
+            <h3>Want to take sign-language classes?</h3>
+            <p class="step-brief">Meet experienced teachers, explore their courses, and find the right learning experience for you.</p>
+            <div class="step-detail">
+              <div>
+                <p>Compare teachers and their courses, then pick the class that matches your level and goals.</p>
+                <div class="step-chips"><span>Teachers</span><span>Courses</span><span>Your level</span></div>
+              </div>
+            </div>
+            <span class="step-link" aria-hidden="true"></span>
+          </article>
+          <article class="step" data-reveal style="--d:270ms">
+            <div class="step-node">
+              <span class="step-ico" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"/></svg></span>
+              <span class="step-num">04</span>
+            </div>
+            <h3>Have a skill to share?</h3>
+            <p class="step-brief">Join our community of providers, teachers, and interpreters, offer your services, and make a difference through what you do.</p>
+            <div class="step-detail">
+              <div>
+                <p>Create your profile, list what you offer, and connect with the people who are looking for it.</p>
+                <div class="step-chips"><span>Providers</span><span>Teachers</span><span>Interpreters</span></div>
+              </div>
+            </div>
+            <span class="step-link" aria-hidden="true"></span>
+          </article>
+          <article class="step step-result" data-reveal style="--d:360ms">
+            <div class="step-node">
+              <span class="step-ico" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m9 11 3 3L22 4"/></svg></span>
+              <span class="step-num">05</span>
+            </div>
+            <h3>Leave understood</h3>
+            <p class="step-brief">You walk out with what you came for — that’s the whole point.</p>
+            <div class="step-detail">
+              <div>
+                <p>The form is signed, the appointment is kept, the class is followed. Communication happened.</p>
+                <div class="step-chips"><span>Signed</span><span>Scheduled</span><span>Understood</span></div>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="how-footnote" data-reveal>
+          <p>The interpreter directory grows as more people join — new profiles appear continuously.</p>
+          <a class="text-link" href="#join">Get started <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 4. INTERPRETERS (nav order #4) ============ -->
+    <section class="interpreters-section section-pad" id="interpreters">
+      <div class="container">
+        <div class="section-heading heading-row" data-reveal>
+          <div><span class="eyebrow"><span class="eyebrow-dot"></span> PEOPLE WHO CONNECT</span><h2>What an interpreter <em>unlocks.</em></h2></div>
+        </div>
+        <div class="offer-grid">
+          <article class="offer-card offer-blue" data-num="01" data-reveal>
+            <span class="offer-icon oi-appoint" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="m9 16 2 2 4-4"/></svg></span>
+            <h3>Appointments &amp; visits</h3>
+            <p>An interpreter at your side for medical visits, official appointments and any in-person conversation that matters.</p>
+            <div class="offer-more"><div class="offer-tags"><span class="tag">Medical</span><span class="tag">Official</span><span class="tag">In person</span></div></div>
+          </article>
+          <article class="offer-card offer-peach" data-num="02" data-reveal style="--d:70ms">
+            <span class="offer-icon oi-docs" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4M10 9H8M16 13H8M16 17H8"/></svg></span>
+            <h3>Administrative procedures</h3>
+            <p>Forms, contracts and paperwork interpreted step by step — so you sign knowing exactly what it says.</p>
+            <div class="offer-more"><div class="offer-tags"><span class="tag">Forms</span><span class="tag">Contracts</span><span class="tag">Offices</span></div></div>
+          </article>
+          <article class="offer-card offer-deep" data-num="03" data-reveal style="--d:140ms">
+            <span class="offer-icon oi-edu" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></span>
+            <h3>Education support</h3>
+            <p>Classes, lectures and parent–teacher meetings interpreted, so learning never pauses.</p>
+            <div class="offer-more"><div class="offer-tags"><span class="tag">Classes</span><span class="tag">Lectures</span><span class="tag">Meetings</span></div></div>
+          </article>
+          <article class="offer-card offer-blue" data-num="04" data-reveal style="--d:60ms">
+            <span class="offer-icon oi-work" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></span>
+            <h3>Work &amp; professional</h3>
+            <p>Job interviews, trainings and everyday workplace communication — your skills, understood.</p>
+            <div class="offer-more"><div class="offer-tags"><span class="tag">Interviews</span><span class="tag">Training</span><span class="tag">Teams</span></div></div>
+          </article>
+          <article class="offer-card offer-peach" data-num="05" data-reveal style="--d:130ms">
+            <span class="offer-icon oi-daily" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg></span>
+            <h3>Everyday life</h3>
+            <p>Shops, services, neighbors — the daily moments where a barrier can appear, and disappear.</p>
+            <div class="offer-more"><div class="offer-tags"><span class="tag">Shops</span><span class="tag">Services</span><span class="tag">Daily</span></div></div>
+          </article>
+          <article class="offer-card offer-cta" data-num="?" data-reveal style="--d:200ms">
+            <h3>Don't see your situation?</h3>
+            <p>Ishara is built with its community. If your need isn't listed yet, tell us — the directory grows with every voice.</p>
+            <a class="cta-link" href="mailto:hello@ishara.example">Get in touch <span aria-hidden="true">↗</span></a>
+          </article>
+        </div>
+        <div class="interpreters-footnote" data-reveal>
+          <a class="btn btn-primary" href="#join">Browse the interpreter directory <span aria-hidden="true">↗</span></a>
+          <p>Profiles, languages and availability will appear as the directory grows.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 5. PROVIDERS (nav order #5) ============ -->
+    <section class="provider-section section-pad" id="providers">
+      <div class="container provider-panel" data-reveal>
+        <div class="provider-copy">
+          <span class="eyebrow eyebrow-light">PROVIDERS — BUSINESSES, ORGANIZATIONS &amp; SERVICES</span>
+          <h2>Make your services accessible to <em>more people.</em></h2>
+          <p>Are you a business, organization, or service provider who knows sign language? Join Ishara to make your services easier to access, connect with more people, and create a more inclusive experience for everyone.</p>
+          <a class="btn btn-light btn-lg" href="../loginpage/login.html">Join Us <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="provider-grid">
+          <article class="provider-mini" data-reveal style="--d:120ms">
+            <span class="pm-ico" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+            <div>
+              <span class="pm-tag">WHO CAN JOIN</span>
+              <h3>Businesses &amp; service providers</h3>
+              <p>Businesses, organizations, and individuals who know sign language and want to make their services more accessible to the deaf and hard-of-hearing community.</p>
+            </div>
+          </article>
+          <article class="provider-mini" data-reveal style="--d:200ms">
+            <span class="pm-ico" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span>
+            <div>
+              <span class="pm-tag">WHAT YOU OFFER</span>
+              <h3>Your services, made accessible</h3>
+              <p>Present your services on Ishara, help people discover what you offer, and make it easier for them to reach and communicate with you.</p>
+            </div>
+          </article>
+          <article class="provider-mini" data-reveal style="--d:280ms">
+            <span class="pm-ico" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg></span>
+            <div>
+              <span class="pm-tag">WHY JOIN</span>
+              <h3>Reach a wider community</h3>
+              <p>Connect with more people, make your services easier to access, and contribute to a more inclusive experience for everyone.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 6. COURSES (nav order #6) ============ -->
+    <section class="courses-section section-pad" id="courses">
+      <div class="container courses-layout">
+        <div class="courses-copy" data-reveal>
+          <span class="eyebrow"><span class="eyebrow-dot"></span> LEARN AT YOUR OWN PACE</span>
+          <h2>A language worth <em>learning.</em></h2>
+          <p>Sign language isn't just another skill on a list — it's how you tell someone “you matter” with your hands. It's visual, expressive, and easier to start than you think.</p>
+          <div class="course-points">
+            <span>01 <b>Beginner-friendly content — start from zero.</b></span>
+            <span>02 <b>Resources as they're published — courses are on their way.</b></span>
+            <span>03 <b>A skill that connects — every sign opens a conversation.</b></span>
+          </div>
+          <div class="courses-actions">
+            <a class="btn btn-primary" href="#join">Explore courses <span aria-hidden="true">↗</span></a>
+            <p class="courses-note">Courses are being prepared — beginner-friendly first. <a href="#join">Be the first to know.</a></p>
+          </div>
+        </div>
+        <div class="sign-grid">
+          <article class="sign-card sc-hello" data-reveal style="--d:80ms">
+            <span class="sign-glyph" aria-hidden="true">
+              <svg viewBox="14 4 212 224" fill="none">
+                <g class="glyph-hand"><defs><linearGradient id="gh-skin" gradientUnits="userSpaceOnUse" x1="70" y1="30" x2="170" y2="210"><stop offset="0" stop-color="#f4b99f"/><stop offset=".55" stop-color="#e08a6d"/><stop offset="1" stop-color="#d27a5c"/></linearGradient></defs><defs><linearGradient id="gh-sh" gradientUnits="userSpaceOnUse" x1="104" y1="0" x2="168" y2="0"><stop offset="0" stop-color="#c96f52" stop-opacity="0"/><stop offset="1" stop-color="#c96f52" stop-opacity=".38"/></linearGradient><radialGradient id="gh-hi" gradientUnits="userSpaceOnUse" cx="108" cy="164" r="30"><stop offset="0" stop-color="#fff" stop-opacity=".28"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient></defs><path d="M97 208 C95 196 88 184 84 170 C80 156 86 146 92 140 C92 128 94 116 102 111 L158 115 C170 122 169 138 164 154 C159 172 152 190 148 208Z" fill="url(#gh-skin)" stroke="#a9543c" stroke-width="4.6" stroke-linejoin="round"/><g class="f-thumb"><path d="M89.4 181.4 L85.7 178.8 L82.3 176.3 L78.9 173.8 L75.4 171.4 L71.9 169 L68.3 166.7 L64.7 164.5 L61 162.4 L57.2 160.3 L53.4 158.2 L49.5 156.3 L45.6 154.4 L41.6 152.6 L37.5 150.8 L33.4 149.1 L29.2 147.5 A8.5 8.5 0 0 1 34.2 131.3 L38.9 132.5 L43.5 133.7 L48.1 135.1 L52.6 136.6 L57.1 138.1 L61.5 139.7 L66 141.4 L70.3 143.2 L74.7 145.1 L78.9 147 L83.2 149.1 L87.4 151.2 L91.6 153.4 L95.7 155.7 L99.7 158.1 L103.3 160.6Z" fill="url(#gh-skin)" stroke="#a9543c" stroke-width="4.6" stroke-linejoin="round"/><path d="M98 168.5 L94.4 166 L90.6 163.5 L86.7 161.2 L82.8 158.9 L78.9 156.7 L74.9 154.5 L70.9 152.5 L66.8 150.5 L62.6 148.6 L58.4 146.8 L54.2 145 L49.9 143.3 L45.6 141.7 L41.2 140.2 L36.8 138.8 L32.3 137.4 L34.2 131.3 L38.9 132.5 L43.5 133.7 L48.1 135.1 L52.6 136.6 L57.1 138.1 L61.5 139.7 L66 141.4 L70.3 143.2 L74.7 145.1 L78.9 147 L83.2 149.1 L87.4 151.2 L91.6 153.4 L95.7 155.7 L99.7 158.1 L103.3 160.6Z" fill="#c96f52" opacity=".28"/><g fill="none" stroke="#a9543c" stroke-width="2.8" stroke-linecap="round" opacity=".38"><path d="M59.6 157 Q61.7 150.6 66.9 146.2"/></g></g><g class="f-pinky"><path d="M146.9 138.3 L148.2 134.3 L149.6 130.3 L151 126.3 L152.5 122.3 L154 118.3 L155.6 114.3 L157.2 110.4 L158.8 106.5 L160.5 102.6 L162.2 98.6 L163.9 94.8 L165.7 90.9 L167.5 87 L169.3 83.2 L171.2 79.3 L173.1 75.5 A6.5 6.5 0 0 1 184.8 81.1 L183.2 84.9 L181.5 88.7 L179.9 92.5 L178.4 96.4 L176.8 100.2 L175.3 104.1 L173.9 107.9 L172.4 111.8 L171 115.7 L169.7 119.6 L168.3 123.5 L167.1 127.4 L165.8 131.3 L164.6 135.3 L163.4 139.2 L162.1 143.2Z" fill="url(#gh-skin)" stroke="#a9543c" stroke-width="4.6" stroke-linejoin="round"/><path d="M156.3 141.3 L157.6 137.3 L158.9 133.4 L160.2 129.4 L161.5 125.5 L162.9 121.5 L164.3 117.6 L165.8 113.7 L167.3 109.8 L168.8 105.9 L170.3 102 L171.9 98.1 L173.5 94.3 L175.2 90.4 L176.9 86.6 L178.6 82.8 L180.4 78.9 L184.8 81.1 L183.2 84.9 L181.5 88.7 L179.9 92.5 L178.4 96.4 L176.8 100.2 L175.3 104.1 L173.9 107.9 L172.4 111.8 L171 115.7 L169.7 119.6 L168.3 123.5 L167.1 127.4 L165.8 131.3 L164.6 135.3 L163.4 139.2 L162.1 143.2Z" fill="#c96f52" opacity=".28"/><g fill="none" stroke="#a9543c" stroke-width="2.8" stroke-linecap="round" opacity=".38"><path d="M158.5 114.7 Q163.4 114.9 167.4 117.5"/><path d="M166.2 96.3 Q170.7 96.5 174.4 99"/></g></g><g class="f-ring"><path d="M130.9 129.7 L131.4 124.1 L132.2 118.4 L132.9 112.7 L133.7 107.1 L134.5 101.5 L135.3 95.8 L136.1 90.2 L136.9 84.5 L137.8 78.9 L138.7 73.3 L139.6 67.6 L140.5 62 L141.4 56.4 L142.4 50.8 L143.4 45.1 L144.4 39.5 A7.5 7.5 0 0 1 159.2 41.8 L158.5 47.4 L157.8 53 L157.1 58.6 L156.4 64.2 L155.8 69.9 L155.2 75.5 L154.6 81.1 L154 86.7 L153.4 92.3 L152.8 97.9 L152.3 103.6 L151.8 109.2 L151.3 114.8 L150.8 120.4 L150.3 126 L149.8 131.7Z" fill="url(#gh-skin)" stroke="#a9543c" stroke-width="4.6" stroke-linejoin="round"/><path d="M142.6 130.9 L143.2 125.3 L143.7 119.6 L144.3 114 L144.9 108.4 L145.5 102.8 L146.2 97.1 L146.8 91.5 L147.5 85.9 L148.2 80.3 L148.9 74.6 L149.6 69 L150.4 63.4 L151.1 57.8 L151.9 52.2 L152.7 46.6 L153.5 40.9 L159.2 41.8 L158.5 47.4 L157.8 53 L157.1 58.6 L156.4 64.2 L155.8 69.9 L155.2 75.5 L154.6 81.1 L154 86.7 L153.4 92.3 L152.8 97.9 L152.3 103.6 L151.8 109.2 L151.3 114.8 L150.8 120.4 L150.3 126 L149.8 131.7Z" fill="#c96f52" opacity=".28"/><g fill="none" stroke="#a9543c" stroke-width="2.8" stroke-linecap="round" opacity=".38"><path d="M138.8 95 Q144.4 94.1 149.7 96.2"/><path d="M142.6 68.4 Q147.8 67.5 152.7 69.5"/></g></g><g class="f-index"><path d="M94.4 131.8 L93.7 126.2 L93.1 120.6 L92.5 115 L91.9 109.4 L91.3 103.8 L90.7 98.1 L90 92.5 L89.4 86.9 L88.7 81.3 L88 75.7 L87.3 70.1 L86.5 64.5 L85.8 58.9 L85 53.3 L84.2 47.7 L83.4 42.1 A7.5 7.5 0 0 1 98.2 39.6 L99.3 45.2 L100.3 50.8 L101.4 56.4 L102.4 62 L103.4 67.6 L104.4 73.2 L105.4 78.8 L106.4 84.5 L107.3 90.1 L108.2 95.7 L109.1 101.3 L110 107 L110.9 112.6 L111.7 118.2 L112.6 123.9 L113.2 129.5Z" fill="url(#gh-skin)" stroke="#a9543c" stroke-width="4.6" stroke-linejoin="round"/><path d="M106.1 130.4 L105.4 124.8 L104.7 119.1 L103.9 113.5 L103.2 107.9 L102.4 102.3 L101.6 96.6 L100.7 91 L99.9 85.4 L99.1 79.8 L98.2 74.2 L97.3 68.6 L96.4 63 L95.4 57.4 L94.5 51.8 L93.5 46.2 L92.6 40.6 L98.2 39.6 L99.3 45.2 L100.3 50.8 L101.4 56.4 L102.4 62 L103.4 67.6 L104.4 73.2 L105.4 78.8 L106.4 84.5 L107.3 90.1 L108.2 95.7 L109.1 101.3 L110 107 L110.9 112.6 L111.7 118.2 L112.6 123.9 L113.2 129.5Z" fill="#c96f52" opacity=".28"/><g fill="none" stroke="#a9543c" stroke-width="2.8" stroke-linecap="round" opacity=".38"><path d="M93.9 96.3 Q99.1 94.2 104.7 95"/><path d="M90.3 69.7 Q95.2 67.7 100.4 68.5"/></g></g><g class="f-middle"><path d="M112 127.5 L112 121.2 L112.1 114.8 L112.2 108.5 L112.4 102.1 L112.5 95.8 L112.7 89.5 L112.8 83.1 L112.9 76.8 L113.1 70.4 L113.2 64.1 L113.3 57.7 L113.5 51.4 L113.6 45 L113.7 38.7 L113.9 32.3 L114 26 A8 8 0 0 1 130 26 L130.1 32.3 L130.3 38.7 L130.4 45 L130.5 51.4 L130.7 57.7 L130.8 64.1 L130.9 70.4 L131.1 76.8 L131.2 83.1 L131.3 89.5 L131.5 95.8 L131.6 102.1 L131.8 108.5 L131.9 114.8 L132 121.2 L132 127.5Z" fill="url(#gh-skin)" stroke="#a9543c" stroke-width="4.6" stroke-linejoin="round"/><path d="M124.4 127.5 L124.4 121.2 L124.4 114.8 L124.3 108.5 L124.3 102.1 L124.3 95.8 L124.2 89.5 L124.2 83.1 L124.2 76.8 L124.1 70.4 L124.1 64.1 L124.1 57.7 L124 51.4 L124 45 L124 38.7 L124 32.3 L123.9 26 L130 26 L130.1 32.3 L130.3 38.7 L130.4 45 L130.5 51.4 L130.7 57.7 L130.8 64.1 L130.9 70.4 L131.1 76.8 L131.2 83.1 L131.3 89.5 L131.5 95.8 L131.6 102.1 L131.8 108.5 L131.9 114.8 L132 121.2 L132 127.5Z" fill="#c96f52" opacity=".28"/><g fill="none" stroke="#a9543c" stroke-width="2.8" stroke-linecap="round" opacity=".38"><path d="M116.2 88 Q122 86.4 127.8 88"/><path d="M116.6 58 Q122 56.5 127.4 58"/></g></g><path d="M92 146 C91 130 95 117 104 113 L157 117 C168 123 167 138 162 150 L150 168 L98 176 C92 168 89 156 92 146Z" fill="url(#gh-skin)"/><path d="M104 126 L162 126 L166 140 L160 170 L148 208 L104 208Z" fill="url(#gh-sh)"/><circle cx="108" cy="164" r="30" fill="url(#gh-hi)"/><g fill="none" stroke="#a9543c" stroke-width="1.3" stroke-linecap="round" opacity=".4"><path d="M97 148 C113 141 135 141 160 148"/><path d="M104 152 C101 168 110 182 124 192"/><path d="M112 136 C126 132 141 133 156 138" opacity=".55"/><path d="M108 204 C118 207 130 207 140 204" opacity=".5"/></g><path d="M92 200 H154 L158 230 H88Z" fill="#1c5a80"/><rect x="88" y="198" width="70" height="10" rx="5" fill="#2274a5"/><path d="M100 210 V224 M146 210 V224" stroke="#14486a" stroke-width="1.4" stroke-linecap="round" opacity=".5"/></g>
+                <path class="glyph-arc arc-1" d="M198 78 a22 22 0 0 1 8 22"/><path class="glyph-arc arc-2" d="M210 58 a42 42 0 0 1 10 50"/>
+              </svg>
+            </span>
+            <div>
+              <h3 class="sign-word">Hello <span class="sign-ar" lang="ar">سلام</span></h3>
+              <div class="sign-mean"><div><p>An open palm, a small wave — the warmest way into any conversation.</p></div></div>
+            </div>
+          </article>
+          <article class="sign-card sc-thanks" data-reveal style="--d:150ms">
+            <span class="sign-glyph" aria-hidden="true">
+              <svg viewBox="14 4 212 224" fill="none">
+                <g class="glyph-hand"><defs><linearGradient id="gt-skin" gradientUnits="userSpaceOnUse" x1="70" y1="30" x2="170" y2="210"><stop offset="0" stop-color="#f4b99f"/><stop offset=".55" stop-color="#e08a6d"/><stop offset="1" stop-color="#d27a5c"/></linearGradient></defs><defs><linearGradient id="gt-sh" gradientUnits="userSpaceOnUse" x1="104" y1="0" x2="168" y2="0"><stop offset="0" stop-color="#c96f52" stop-opacity="0"/><stop offset="1" stop-color="#c96f52" stop-opacity=".38"/></linearGradient><radialGradient id="gt-hi" gradientUnits="userSpaceOnUse" cx="108" cy="164" r="30"><stop offset="0" stop-color="#fff" stop-opacity=".28"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient></defs><path d="M97 208 C95 196 88 184 84 170 C80 156 86 146 92 140 C92 128 94 116 102 111 L158 115 C170 122 169 138 164 154 C159 172 152 190 148 208Z" fill="url(#gt-skin)" stroke="#a9543c" stroke-width="4.6" stroke-linejoin="round"/><g class="f-thumb"><path d="M84.5 178.5 L83.1 175.1 L82 171.8 L80.8 168.4 L79.6 165.1 L78.4 161.8 L77.2 158.4 L75.9 155.1 L74.6 151.8 L73.2 148.5 L71.8 145.2 L70.4 142 L68.9 138.7 L67.4 135.5 L65.9 132.2 L64.3 129 L62.7 125.7 A8.5 8.5 0 0 1 77.4 117.1 L79.5 120.3 L81.6 123.4 L83.6 126.6 L85.6 129.8 L87.5 133 L89.5 136.2 L91.4 139.5 L93.3 142.7 L95.1 146 L96.9 149.3 L98.7 152.7 L100.4 156 L102.1 159.4 L103.8 162.7 L105.4 166.1 L106.7 169.5Z" fill="url(#gt-skin)" stroke="#a9543c" stroke-width="4.6" stroke-linejoin="round"/><path d="M98.3 172.9 L96.9 169.5 L95.5 166.2 L94 162.8 L92.5 159.5 L91 156.1 L89.4 152.8 L87.8 149.5 L86.2 146.2 L84.5 142.9 L82.8 139.7 L81 136.4 L79.3 133.2 L77.4 130 L75.6 126.8 L73.7 123.6 L71.8 120.4 L77.4 117.1 L79.5 120.3 L81.6 123.4 L83.6 126.6 L85.6 129.8 L87.5 133 L89.5 136.2 L91.4 139.5 L93.3 142.7 L95.1 146 L96.9 149.3 L98.7 152.7 L100.4 156 L102.1 159.4 L103.8 162.7 L105.4 166.1 L106.7 169.5Z" fill="#c96f52" opacity=".28"/><g fill="none" stroke="#a9543c" stroke-width="2.8" stroke-linecap="round" opacity=".38"><path d="M77.1 147.7 Q82.3 143.7 88.9 143"/></g></g><g class="f-pinky"><path d="M148.7 140.9 L149 136.4 L149.3 132 L149.6 127.5 L150 123.1 L150.3 118.6 L150.6 114.2 L151 109.7 L151.3 105.3 L151.6 100.9 L152 96.4 L152.3 92 L152.6 87.5 L153 83.1 L153.3 78.6 L153.6 74.2 L154 69.8 A6.5 6.5 0 0 1 166.9 70.4 L166.8 74.9 L166.7 79.3 L166.5 83.8 L166.4 88.2 L166.3 92.7 L166.2 97.2 L166 101.6 L165.9 106.1 L165.8 110.5 L165.6 115 L165.5 119.4 L165.4 123.9 L165.2 128.3 L165.1 132.8 L164.9 137.2 L164.7 141.7Z" fill="url(#gt-skin)" stroke="#a9543c" stroke-width="4.6" stroke-linejoin="round"/><path d="M158.6 141.4 L158.9 136.9 L159.1 132.5 L159.3 128 L159.5 123.6 L159.7 119.1 L159.9 114.7 L160.1 110.2 L160.3 105.8 L160.5 101.3 L160.8 96.9 L161 92.4 L161.2 88 L161.4 83.5 L161.6 79.1 L161.8 74.6 L162 70.2 L166.9 70.4 L166.8 74.9 L166.7 79.3 L166.5 83.8 L166.4 88.2 L166.3 92.7 L166.2 97.2 L166 101.6 L165.9 106.1 L165.8 110.5 L165.6 115 L165.5 119.4 L165.4 123.9 L165.2 128.3 L165.1 132.8 L164.9 137.2 L164.7 141.7Z" fill="#c96f52" opacity=".28"/><g fill="none" stroke="#a9543c" stroke-width="2.8" stroke-linecap="round" opacity=".38"><path d="M153.5 113.3 Q158.2 112.3 162.8 113.8"/><path d="M154.9 92.3 Q159.3 91.3 163.6 92.7"/></g></g><g class="f-ring"><path d="M131.9 132.6 L132 126.9 L132.2 121.2 L132.4 115.6 L132.7 109.9 L132.9 104.2 L133.1 98.6 L133.4 92.9 L133.6 87.2 L133.8 81.6 L134.1 75.9 L134.3 70.2 L134.5 64.6 L134.8 58.9 L135 53.2 L135.2 47.6 L135.5 41.9 A7 7 0 0 1 149.5 42.1 L149.5 47.8 L149.5 53.5 L149.6 59.1 L149.6 64.8 L149.6 70.5 L149.7 76.2 L149.7 81.8 L149.8 87.5 L149.8 93.2 L149.8 98.8 L149.9 104.5 L149.9 110.2 L149.9 115.9 L150 121.5 L150 127.2 L149.9 132.9Z" fill="url(#gt-skin)" stroke="#a9543c" stroke-width="4.6" stroke-linejoin="round"/><path d="M143 132.8 L143.1 127.1 L143.2 121.4 L143.3 115.7 L143.3 110.1 L143.4 104.4 L143.5 98.7 L143.5 93.1 L143.6 87.4 L143.7 81.7 L143.7 76.1 L143.8 70.4 L143.9 64.7 L143.9 59.1 L144 53.4 L144.1 47.7 L144.1 42 L149.5 42.1 L149.5 47.8 L149.5 53.5 L149.6 59.1 L149.6 64.8 L149.6 70.5 L149.7 76.2 L149.7 81.8 L149.8 87.5 L149.8 93.2 L149.8 98.8 L149.9 104.5 L149.9 110.2 L149.9 115.9 L150 121.5 L150 127.2 L149.9 132.9Z" fill="#c96f52" opacity=".28"/><g fill="none" stroke="#a9543c" stroke-width="2.8" stroke-linecap="round" opacity=".38"><path d="M136.3 97.4 Q141.5 96 146.7 97.5"/><path d="M137.2 70.5 Q142 69.2 146.7 70.7"/></g></g><g class="f-index"><path d="M96.7 133.2 L96.5 127.4 L96.5 121.6 L96.4 115.8 L96.3 110 L96.2 104.2 L96.2 98.4 L96.1 92.6 L96 86.8 L96 81 L95.9 75.2 L95.8 69.3 L95.8 63.5 L95.7 57.7 L95.6 51.9 L95.6 46.1 L95.5 40.3 A7.5 7.5 0 0 1 110.5 39.8 L110.8 45.6 L111.2 51.4 L111.5 57.2 L111.8 63 L112.2 68.8 L112.5 74.6 L112.9 80.4 L113.2 86.2 L113.5 92 L113.9 97.8 L114.2 103.6 L114.5 109.4 L114.9 115.1 L115.2 120.9 L115.5 126.7 L115.7 132.5Z" fill="url(#gt-skin)" stroke="#a9543c" stroke-width="4.6" stroke-linejoin="round"/><path d="M108.5 132.8 L108.3 127 L108.1 121.2 L107.9 115.4 L107.6 109.6 L107.4 103.8 L107.1 98 L106.9 92.2 L106.7 86.4 L106.4 80.6 L106.2 74.8 L106 69 L105.7 63.2 L105.5 57.4 L105.3 51.6 L105 45.8 L104.8 40 L110.5 39.8 L110.8 45.6 L111.2 51.4 L111.5 57.2 L111.8 63 L112.2 68.8 L112.5 74.6 L112.9 80.4 L113.2 86.2 L113.5 92 L113.9 97.8 L114.2 103.6 L114.5 109.4 L114.9 115.1 L115.2 120.9 L115.5 126.7 L115.7 132.5Z" fill="#c96f52" opacity=".28"/><g fill="none" stroke="#a9543c" stroke-width="2.8" stroke-linecap="round" opacity=".38"><path d="M99.5 97 Q104.9 95.2 110.4 96.6"/><path d="M99 69.5 Q104 67.9 109.1 69.1"/></g></g><g class="f-middle"><path d="M114.5 129.4 L114.5 123.2 L114.6 116.9 L114.7 110.7 L114.9 104.5 L115 98.3 L115.2 92.1 L115.3 85.9 L115.4 79.7 L115.6 73.5 L115.7 67.3 L115.8 61 L116 54.8 L116.1 48.6 L116.2 42.4 L116.4 36.2 L116.5 30 A7.5 7.5 0 0 1 131.5 30 L131.6 36.2 L131.8 42.4 L131.9 48.6 L132 54.8 L132.2 61 L132.3 67.3 L132.4 73.5 L132.6 79.7 L132.7 85.9 L132.8 92.1 L133 98.3 L133.1 104.5 L133.3 110.7 L133.4 116.9 L133.5 123.2 L133.5 129.4Z" fill="url(#gt-skin)" stroke="#a9543c" stroke-width="4.6" stroke-linejoin="round"/><path d="M126.3 129.4 L126.3 123.2 L126.3 116.9 L126.2 110.7 L126.2 104.5 L126.2 98.3 L126.1 92.1 L126.1 85.9 L126.1 79.7 L126 73.5 L126 67.3 L126 61 L125.9 54.8 L125.9 48.6 L125.9 42.4 L125.8 36.2 L125.8 30 L131.5 30 L131.6 36.2 L131.8 42.4 L131.9 48.6 L132 54.8 L132.2 61 L132.3 67.3 L132.4 73.5 L132.6 79.7 L132.7 85.9 L132.8 92.1 L133 98.3 L133.1 104.5 L133.3 110.7 L133.4 116.9 L133.5 123.2 L133.5 129.4Z" fill="#c96f52" opacity=".28"/><g fill="none" stroke="#a9543c" stroke-width="2.8" stroke-linecap="round" opacity=".38"><path d="M118.5 90.7 Q124 89.2 129.5 90.7"/><path d="M118.9 61.3 Q124 59.9 129.1 61.3"/></g></g><path d="M92 146 C91 130 95 117 104 113 L157 117 C168 123 167 138 162 150 L150 168 L98 176 C92 168 89 156 92 146Z" fill="url(#gt-skin)"/><path d="M104 126 L162 126 L166 140 L160 170 L148 208 L104 208Z" fill="url(#gt-sh)"/><circle cx="108" cy="164" r="30" fill="url(#gt-hi)"/><g fill="none" stroke="#a9543c" stroke-width="3.2" stroke-linecap="round" opacity=".4"><path d="M97 148 C113 141 135 141 160 148"/><path d="M104 152 C101 168 110 182 124 192"/></g><path d="M92 200 H154 L158 230 H88Z" fill="#1c5a80"/><rect x="88" y="198" width="70" height="10" rx="5" fill="#2274a5"/><path d="M100 210 V224 M146 210 V224" stroke="#14486a" stroke-width="1.4" stroke-linecap="round" opacity=".5"/></g>
+                <path class="glyph-arc arc-1" d="M184 110 a20 20 0 0 1 4 24"/><path class="glyph-arc arc-2" d="M198 94 a38 38 0 0 1 6 56"/>
+              </svg>
+            </span>
+            <div>
+              <h3 class="sign-word">Thank you <span class="sign-ar" lang="ar">شكرا</span></h3>
+              <div class="sign-mean"><div><p>Fingertips at the chin, moving forward — gratitude you can see.</p></div></div>
+            </div>
+          </article>
+          <article class="sign-card sc-yes" data-reveal style="--d:220ms">
+            <span class="sign-glyph" aria-hidden="true">
+              <svg viewBox="14 4 212 224" fill="none">
+                <g class="glyph-hand"><defs><linearGradient id="gy-skin" gradientUnits="userSpaceOnUse" x1="70" y1="80" x2="170" y2="210"><stop offset="0" stop-color="#f4b99f"/><stop offset=".55" stop-color="#e08a6d"/><stop offset="1" stop-color="#d27a5c"/></linearGradient></defs><defs><linearGradient id="gy-sh" gradientUnits="userSpaceOnUse" x1="104" y1="0" x2="168" y2="0"><stop offset="0" stop-color="#c96f52" stop-opacity="0"/><stop offset="1" stop-color="#c96f52" stop-opacity=".38"/></linearGradient><radialGradient id="gy-hi" gradientUnits="userSpaceOnUse" cx="108" cy="164" r="30"><stop offset="0" stop-color="#fff" stop-opacity=".28"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient></defs><path d="M100 168 C99 184 98 196 97 208 L148 208 C147 196 146 184 146 168Z" fill="url(#gy-skin)" stroke="#a9543c" stroke-width="4.6" stroke-linejoin="round"/><path d="M88 150 C84 120 90 100 106 96 C118 92 140 92 154 98 C170 104 172 130 168 150 C166 162 158 170 150 172 L102 172 C94 170 90 162 88 150Z" fill="url(#gy-skin)" stroke="#a9543c" stroke-width="4.6" stroke-linejoin="round"/><g class="f-curl"><path d="M112.5 98 L112.5 100.9 L112.4 103.8 L112.4 106.6 L112.4 109.5 L112.3 112.4 L112.3 115.2 L112.3 118.1 L112.2 121 L112.2 123.9 L112.2 126.8 L112.2 129.6 L112.1 132.5 L112.1 135.4 L112.1 138.2 L112 141.1 L112 144 A8 8 0 0 1 96 144 L96 141.1 L95.9 138.2 L95.9 135.4 L95.9 132.5 L95.8 129.6 L95.8 126.8 L95.8 123.9 L95.8 121 L95.7 118.1 L95.7 115.2 L95.7 112.4 L95.6 109.5 L95.6 106.6 L95.6 103.8 L95.5 100.9 L95.5 98 A8.5 8.5 0 0 1 112.5 98Z" fill="url(#gy-skin)" stroke="#a9543c" stroke-width="3.7" stroke-linejoin="round"/><path d="M102 94.3 L102 97.4 L102 100.5 L102 103.6 L102 106.7 L102 109.8 L102 113 L102 116.1 L102 119.2 L102 122.3 L102 125.4 L102 128.5 L102 131.6 L102.1 134.7 L102.1 137.8 L102.1 140.9 L102.1 144 L96 144 L96 140.9 L95.9 137.8 L95.9 134.7 L95.9 131.6 L95.8 128.5 L95.8 125.4 L95.8 122.3 L95.7 119.2 L95.7 116.1 L95.7 113 L95.6 109.8 L95.6 106.7 L95.6 103.6 L95.5 100.5 L95.5 97.4 L95.5 94.3Z" fill="#c96f52" opacity=".28"/><g fill="none" stroke="#a9543c" stroke-width="2.2" stroke-linecap="round" opacity=".38"></g></g><g class="f-curl"><path d="M130 98 L130 100.9 L129.9 103.8 L129.9 106.6 L129.9 109.5 L129.8 112.4 L129.8 115.2 L129.8 118.1 L129.8 121 L129.7 123.9 L129.7 126.8 L129.7 129.6 L129.6 132.5 L129.6 135.4 L129.6 138.2 L129.5 141.1 L129.5 144 A8.5 8.5 0 0 1 112.5 144 L112.5 141.1 L112.4 138.2 L112.4 135.4 L112.4 132.5 L112.3 129.6 L112.3 126.8 L112.3 123.9 L112.2 121 L112.2 118.1 L112.2 115.2 L112.2 112.4 L112.1 109.5 L112.1 106.6 L112.1 103.8 L112 100.9 L112 98 A9 9 0 0 1 130 98Z" fill="url(#gy-skin)" stroke="#a9543c" stroke-width="3.7" stroke-linejoin="round"/><path d="M118.8 94.3 L118.8 97.4 L118.8 100.5 L118.9 103.6 L118.9 106.7 L118.9 109.8 L118.9 113 L118.9 116.1 L118.9 119.2 L118.9 122.3 L118.9 125.4 L118.9 128.5 L118.9 131.6 L118.9 134.7 L118.9 137.8 L119 140.9 L119 144 L112.5 144 L112.5 140.9 L112.4 137.8 L112.4 134.7 L112.4 131.6 L112.3 128.5 L112.3 125.4 L112.3 122.3 L112.2 119.2 L112.2 116.1 L112.2 113 L112.1 109.8 L112.1 106.7 L112.1 103.6 L112 100.5 L112 97.4 L112 94.3Z" fill="#c96f52" opacity=".28"/><g fill="none" stroke="#a9543c" stroke-width="2.2" stroke-linecap="round" opacity=".38"></g></g><g class="f-curl"><path d="M146.5 98 L146.5 100.9 L146.4 103.8 L146.4 106.6 L146.4 109.5 L146.3 112.4 L146.3 115.2 L146.3 118.1 L146.2 121 L146.2 123.9 L146.2 126.8 L146.2 129.6 L146.1 132.5 L146.1 135.4 L146.1 138.2 L146 141.1 L146 144 A8 8 0 0 1 130 144 L130 141.1 L129.9 138.2 L129.9 135.4 L129.9 132.5 L129.8 129.6 L129.8 126.8 L129.8 123.9 L129.8 121 L129.7 118.1 L129.7 115.2 L129.7 112.4 L129.6 109.5 L129.6 106.6 L129.6 103.8 L129.5 100.9 L129.5 98 A8.5 8.5 0 0 1 146.5 98Z" fill="url(#gy-skin)" stroke="#a9543c" stroke-width="3.7" stroke-linejoin="round"/><path d="M136 94.3 L136 97.4 L136 100.5 L136 103.6 L136 106.7 L136 109.8 L136 113 L136 116.1 L136 119.2 L136 122.3 L136 125.4 L136 128.5 L136 131.6 L136.1 134.7 L136.1 137.8 L136.1 140.9 L136.1 144 L130 144 L130 140.9 L129.9 137.8 L129.9 134.7 L129.9 131.6 L129.8 128.5 L129.8 125.4 L129.8 122.3 L129.7 119.2 L129.7 116.1 L129.7 113 L129.6 109.8 L129.6 106.7 L129.6 103.6 L129.5 100.5 L129.5 97.4 L129.5 94.3Z" fill="#c96f52" opacity=".28"/><g fill="none" stroke="#a9543c" stroke-width="2.2" stroke-linecap="round" opacity=".38"></g></g><g class="f-curl"><path d="M161.5 98 L161.5 100.4 L161.4 102.8 L161.4 105.1 L161.4 107.5 L161.3 109.9 L161.3 112.2 L161.3 114.6 L161.2 117 L161.2 119.4 L161.2 121.8 L161.2 124.1 L161.1 126.5 L161.1 128.9 L161.1 131.2 L161 133.6 L161 136 A7 7 0 0 1 147 136 L147 133.6 L146.9 131.2 L146.9 128.9 L146.9 126.5 L146.8 124.1 L146.8 121.8 L146.8 119.4 L146.8 117 L146.7 114.6 L146.7 112.2 L146.7 109.9 L146.6 107.5 L146.6 105.1 L146.6 102.8 L146.5 100.4 L146.5 98 A7.5 7.5 0 0 1 161.5 98Z" fill="url(#gy-skin)" stroke="#a9543c" stroke-width="3.7" stroke-linejoin="round"/><path d="M152.2 95 L152.2 97.5 L152.2 100.1 L152.2 102.7 L152.2 105.2 L152.2 107.8 L152.2 110.3 L152.2 112.9 L152.3 115.5 L152.3 118 L152.3 120.6 L152.3 123.2 L152.3 125.7 L152.3 128.3 L152.3 130.9 L152.3 133.4 L152.3 136 L147 136 L147 133.4 L146.9 130.9 L146.9 128.3 L146.9 125.7 L146.8 123.2 L146.8 120.6 L146.8 118 L146.7 115.5 L146.7 112.9 L146.7 110.3 L146.6 107.8 L146.6 105.2 L146.6 102.7 L146.5 100.1 L146.5 97.5 L146.5 95Z" fill="#c96f52" opacity=".28"/><g fill="none" stroke="#a9543c" stroke-width="2.2" stroke-linecap="round" opacity=".38"></g></g><g class="f-thumb"><path d="M94.7 137.6 L99.2 137.3 L103.7 137.1 L108.1 136.9 L112.6 136.8 L117.1 136.7 L121.6 136.6 L126.1 136.6 L130.6 136.6 L135.1 136.6 L139.5 136.7 L144 136.9 L148.5 137.1 L153 137.3 L157.5 137.5 L162 137.8 L166.5 138.2 A9.5 9.5 0 0 1 165.8 157.1 L161.4 157.2 L157.1 157.3 L152.8 157.4 L148.5 157.6 L144.2 157.8 L139.9 158 L135.6 158.3 L131.3 158.6 L127 158.9 L122.8 159.3 L118.5 159.7 L114.2 160.2 L110 160.7 L105.8 161.2 L101.5 161.8 L97.3 162.4 A12.5 12.5 0 0 1 94.7 137.6Z" fill="url(#gy-skin)" stroke="#a9543c" stroke-width="4.6" stroke-linejoin="round"/><path d="M90.7 153.6 L95.4 153.1 L100.1 152.6 L104.8 152.1 L109.5 151.6 L114.2 151.3 L118.8 150.9 L123.5 150.6 L128.2 150.4 L132.9 150.1 L137.7 150 L142.4 149.9 L147.1 149.8 L151.8 149.8 L156.6 149.8 L161.3 149.8 L166.1 149.9 L165.8 157.1 L161.1 157.2 L156.4 157.3 L151.8 157.4 L147.1 157.6 L142.5 157.8 L137.8 158.1 L133.2 158.4 L128.6 158.8 L124 159.2 L119.4 159.7 L114.8 160.1 L110.2 160.7 L105.6 161.3 L101 161.9 L96.4 162.5 L91.7 163Z" fill="#c96f52" opacity=".28"/><g fill="none" stroke="#a9543c" stroke-width="2.8" stroke-linecap="round" opacity=".38"></g></g><g fill="none" stroke="#a9543c" stroke-width="2.8" stroke-linecap="round" opacity=".35"><path d="M99 108 Q104 102 109 108"/><path d="M116 106 Q122 100 128 106"/><path d="M133 108 Q138 102 143 108"/><path d="M150 112 Q154 107 158 112"/></g><path d="M104 160 L150 160 L150 172 L104 172Z" fill="#c96f52" opacity=".12"/><path d="M92 200 H154 L158 230 H88Z" fill="#1c5a80"/><rect x="88" y="198" width="70" height="10" rx="5" fill="#2274a5"/><path d="M100 210 V224 M146 210 V224" stroke="#14486a" stroke-width="1.4" stroke-linecap="round" opacity=".5"/></g>
+                <path class="glyph-arc arc-1" d="M184 118 a18 18 0 0 1 4 22"/><path class="glyph-arc arc-2" d="M198 104 a34 34 0 0 1 6 50"/>
+              </svg>
+            </span>
+            <div>
+              <h3 class="sign-word">Yes <span class="sign-ar" lang="ar">نعم</span></h3>
+              <div class="sign-mean"><div><p>A fist that nods — agreement you can read from across the room.</p></div></div>
+            </div>
+          </article>
+          <article class="sign-card sc-ily" data-reveal style="--d:290ms">
+            <span class="sign-glyph" aria-hidden="true">
+              <svg viewBox="14 4 212 224" fill="none">
+                <g class="glyph-hand"><defs><linearGradient id="gi-skin" gradientUnits="userSpaceOnUse" x1="70" y1="30" x2="170" y2="210"><stop offset="0" stop-color="#f4b99f"/><stop offset=".55" stop-color="#e08a6d"/><stop offset="1" stop-color="#d27a5c"/></linearGradient></defs><defs><linearGradient id="gi-sh" gradientUnits="userSpaceOnUse" x1="104" y1="0" x2="168" y2="0"><stop offset="0" stop-color="#c96f52" stop-opacity="0"/><stop offset="1" stop-color="#c96f52" stop-opacity=".38"/></linearGradient><radialGradient id="gi-hi" gradientUnits="userSpaceOnUse" cx="108" cy="164" r="30"><stop offset="0" stop-color="#fff" stop-opacity=".28"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient></defs><path d="M97 208 C95 196 88 184 84 170 C80 156 86 146 92 140 C92 128 94 116 102 111 L158 115 C170 122 169 138 164 154 C159 172 152 190 148 208Z" fill="url(#gi-skin)" stroke="#a9543c" stroke-width="4.6" stroke-linejoin="round"/><g class="f-thumb"><path d="M90.5 181.4 L86.8 179.4 L83.4 177.4 L79.9 175.4 L76.4 173.4 L72.9 171.6 L69.3 169.7 L65.7 168 L62.1 166.3 L58.4 164.6 L54.7 163 L50.9 161.5 L47.1 160 L43.2 158.6 L39.3 157.2 L35.4 155.9 L31.4 154.7 A9 9 0 0 1 35.6 137.2 L40 138.1 L44.4 139 L48.7 140 L53 141 L57.3 142.2 L61.5 143.3 L65.8 144.6 L70 146 L74.1 147.4 L78.3 148.8 L82.4 150.4 L86.5 152 L90.6 153.7 L94.6 155.5 L98.6 157.3 L102.2 159.3Z" fill="url(#gi-skin)" stroke="#a9543c" stroke-width="4.6" stroke-linejoin="round"/><path d="M97.8 167.7 L94.1 165.7 L90.3 163.8 L86.5 161.9 L82.7 160.2 L78.8 158.4 L74.9 156.8 L70.9 155.2 L67 153.7 L63 152.2 L58.9 150.8 L54.9 149.5 L50.7 148.2 L46.6 147 L42.4 145.9 L38.2 144.9 L34 143.9 L35.6 137.2 L40 138.1 L44.4 139 L48.7 140 L53 141 L57.3 142.2 L61.5 143.3 L65.8 144.6 L70 146 L74.1 147.4 L78.3 148.8 L82.4 150.4 L86.5 152 L90.6 153.7 L94.6 155.5 L98.6 157.3 L102.2 159.3Z" fill="#c96f52" opacity=".28"/><g fill="none" stroke="#a9543c" stroke-width="2.8" stroke-linecap="round" opacity=".38"><path d="M60.6 161.1 Q62 154.3 66.8 149.3"/></g></g><g class="f-pinky"><path d="M146.9 138.9 L148.1 134.6 L149.4 130.3 L150.8 126 L152.2 121.7 L153.7 117.4 L155.2 113.1 L156.7 108.9 L158.3 104.6 L159.9 100.4 L161.5 96.2 L163.2 92 L164.9 87.8 L166.6 83.6 L168.4 79.4 L170.2 75.3 L172 71.1 A6.5 6.5 0 0 1 184 76.2 L182.4 80.3 L180.8 84.5 L179.3 88.6 L177.8 92.8 L176.3 96.9 L174.9 101.1 L173.5 105.3 L172.1 109.5 L170.8 113.6 L169.5 117.9 L168.2 122.1 L167 126.3 L165.8 130.5 L164.6 134.7 L163.5 139 L162.3 143.3Z" fill="url(#gi-skin)" stroke="#a9543c" stroke-width="4.6" stroke-linejoin="round"/><path d="M156.4 141.6 L157.6 137.3 L158.8 133 L160.1 128.8 L161.4 124.5 L162.7 120.3 L164 116.1 L165.4 111.8 L166.8 107.6 L168.3 103.4 L169.8 99.2 L171.3 95 L172.9 90.9 L174.5 86.7 L176.1 82.5 L177.8 78.4 L179.5 74.3 L184 76.2 L182.4 80.3 L180.8 84.5 L179.3 88.6 L177.8 92.8 L176.3 96.9 L174.9 101.1 L173.5 105.3 L172.1 109.5 L170.8 113.6 L169.5 117.9 L168.2 122.1 L167 126.3 L165.8 130.5 L164.6 134.7 L163.5 139 L162.3 143.3Z" fill="#c96f52" opacity=".28"/><g fill="none" stroke="#a9543c" stroke-width="2.8" stroke-linecap="round" opacity=".38"><path d="M158.2 113.3 Q163 113.3 167.1 115.8"/><path d="M165.5 93.4 Q170 93.4 173.9 95.8"/></g></g><g class="f-index"><path d="M96.6 134.3 L95.7 128.4 L95 122.5 L94.3 116.7 L93.6 110.8 L92.8 104.9 L92.1 99.1 L91.3 93.2 L90.5 87.3 L89.7 81.5 L88.8 75.6 L88 69.8 L87.1 63.9 L86.2 58.1 L85.3 52.2 L84.3 46.4 L83.4 40.5 A7.5 7.5 0 0 1 98.1 37.8 L99.4 43.6 L100.6 49.4 L101.8 55.3 L102.9 61.2 L104.1 67 L105.2 72.9 L106.3 78.7 L107.4 84.6 L108.5 90.5 L109.6 96.3 L110.6 102.2 L111.6 108.1 L112.6 114 L113.6 119.9 L114.6 125.8 L115.4 131.7Z" fill="url(#gi-skin)" stroke="#a9543c" stroke-width="4.6" stroke-linejoin="round"/><path d="M108.2 132.7 L107.4 126.8 L106.6 120.9 L105.7 115 L104.8 109.1 L103.8 103.3 L102.9 97.4 L102 91.5 L101 85.6 L100 79.8 L99 73.9 L98 68.1 L96.9 62.2 L95.8 56.3 L94.8 50.5 L93.7 44.6 L92.5 38.8 L98.1 37.8 L99.4 43.6 L100.6 49.4 L101.8 55.3 L102.9 61.2 L104.1 67 L105.2 72.9 L106.3 78.7 L107.4 84.6 L108.5 90.5 L109.6 96.3 L110.6 102.2 L111.6 108.1 L112.6 114 L113.6 119.9 L114.6 125.8 L115.4 131.7Z" fill="#c96f52" opacity=".28"/><g fill="none" stroke="#a9543c" stroke-width="2.8" stroke-linecap="round" opacity=".38"><path d="M95.2 97.2 Q100.4 94.9 106 95.6"/><path d="M91 69.3 Q95.9 67.2 101.1 67.9"/></g></g><path d="M92 146 C91 130 95 117 104 113 L157 117 C168 123 167 138 162 150 L150 168 L98 176 C92 168 89 156 92 146Z" fill="url(#gi-skin)"/><path d="M104 126 L162 126 L166 140 L160 170 L148 208 L104 208Z" fill="url(#gi-sh)"/><circle cx="108" cy="164" r="30" fill="url(#gi-hi)"/><g fill="none" stroke="#a9543c" stroke-width="3.2" stroke-linecap="round" opacity=".4"><path d="M97 148 C113 141 135 141 160 148"/><path d="M104 152 C101 168 110 182 124 192"/></g><g class="f-fold"><path d="M151.5 119 L151.4 121.1 L151.4 123.2 L151.3 125.4 L151.2 127.5 L151.2 129.6 L151.1 131.8 L151.1 133.9 L151 136 L150.9 138.1 L150.9 140.2 L150.8 142.4 L150.8 144.5 L150.7 146.6 L150.6 148.8 L150.6 150.9 L150.5 153 A8.5 8.5 0 0 1 133.5 153 L133.4 150.9 L133.4 148.8 L133.3 146.6 L133.2 144.5 L133.2 142.4 L133.1 140.2 L133.1 138.1 L133 136 L132.9 133.9 L132.9 131.8 L132.8 129.6 L132.8 127.5 L132.7 125.4 L132.6 123.2 L132.6 121.1 L132.5 119 A9.5 9.5 0 0 1 151.5 119Z" fill="url(#gi-skin)" stroke="#a9543c" stroke-width="4.6" stroke-linejoin="round"/><path d="M139.7 116.3 L139.7 118.6 L139.7 120.9 L139.7 123.2 L139.8 125.5 L139.8 127.8 L139.8 130.1 L139.8 132.3 L139.8 134.6 L139.8 136.9 L139.9 139.2 L139.9 141.5 L139.9 143.8 L139.9 146.1 L139.9 148.4 L139.9 150.7 L140 153 L133.5 153 L133.4 150.7 L133.4 148.4 L133.3 146.1 L133.2 143.8 L133.2 141.5 L133.1 139.2 L133 136.9 L133 134.6 L132.9 132.3 L132.8 130.1 L132.8 127.8 L132.7 125.5 L132.6 123.2 L132.6 120.9 L132.5 118.6 L132.5 116.3Z" fill="#c96f52" opacity=".28"/><g fill="none" stroke="#a9543c" stroke-width="2.8" stroke-linecap="round" opacity=".38"></g></g><g class="f-fold"><path d="M134 116 L133.9 118.4 L133.9 120.8 L133.8 123.1 L133.8 125.5 L133.7 127.9 L133.6 130.2 L133.6 132.6 L133.5 135 L133.4 137.4 L133.4 139.8 L133.3 142.1 L133.2 144.5 L133.2 146.9 L133.1 149.2 L133.1 151.6 L133 154 A9 9 0 0 1 115 154 L114.9 151.6 L114.9 149.2 L114.8 146.9 L114.8 144.5 L114.7 142.1 L114.6 139.8 L114.6 137.4 L114.5 135 L114.4 132.6 L114.4 130.2 L114.3 127.9 L114.2 125.5 L114.2 123.1 L114.1 120.8 L114.1 118.4 L114 116 A10 10 0 0 1 134 116Z" fill="url(#gi-skin)" stroke="#a9543c" stroke-width="4.6" stroke-linejoin="round"/><path d="M121.6 113 L121.6 115.5 L121.6 118.1 L121.6 120.7 L121.6 123.2 L121.7 125.8 L121.7 128.3 L121.7 130.9 L121.7 133.5 L121.7 136 L121.7 138.6 L121.8 141.2 L121.8 143.7 L121.8 146.3 L121.8 148.9 L121.8 151.4 L121.8 154 L115 154 L114.9 151.4 L114.9 148.9 L114.8 146.3 L114.7 143.7 L114.7 141.2 L114.6 138.6 L114.5 136 L114.5 133.5 L114.4 130.9 L114.3 128.3 L114.3 125.8 L114.2 123.2 L114.1 120.7 L114.1 118.1 L114 115.5 L114 113Z" fill="#c96f52" opacity=".28"/><g fill="none" stroke="#a9543c" stroke-width="2.8" stroke-linecap="round" opacity=".38"></g></g><path d="M92 200 H154 L158 230 H88Z" fill="#1c5a80"/><rect x="88" y="198" width="70" height="10" rx="5" fill="#2274a5"/><path d="M100 210 V224 M146 210 V224" stroke="#14486a" stroke-width="1.4" stroke-linecap="round" opacity=".5"/></g>
+                
+              </svg>
+            </span>
+            <div>
+              <h3 class="sign-word">I–L–Y <span class="sign-ar" lang="ar">أحبك</span></h3>
+              <div class="sign-mean"><div><p>Thumb, index and pinky raised — the shape in our logo, saying more than words.</p></div></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ VALUES ============ -->
+    <section class="values-section section-pad" id="values">
+      <div class="container">
+        <div class="section-heading heading-center" data-reveal>
+          <span class="eyebrow"><span class="eyebrow-dot"></span> THE IDEA BEHIND ISHARA</span>
+          <h2>More than a platform.<br><em>A step towards inclusion.</em></h2>
+        </div>
+        <div class="values-grid">
+          <article class="value-card" data-reveal>
+            <span class="value-symbol value-blue" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M13 4h3a2 2 0 0 1 2 2v14"/><path d="M2 20h3"/><path d="M13 20h9"/><path d="M10 12v.01"/><path d="M13 4.562v16.157a1 1 0 0 1-1.242.97L5 20V5.562a2 2 0 0 1 1.515-1.94l4-1A2 2 0 0 1 13 4.561Z"/></svg></span>
+            <span class="value-index">01</span>
+            <h3>Accessibility</h3>
+            <p>Making essential services easier to discover, reach and use — for everyone, every time.</p>
+          </article>
+          <article class="value-card" data-reveal style="--d:90ms">
+            <span class="value-symbol value-peach" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></span>
+            <span class="value-index">02</span>
+            <h3>Connection</h3>
+            <p>Bringing individuals, interpreters and providers together around one simple act: understanding.</p>
+          </article>
+          <article class="value-card" data-reveal style="--d:180ms">
+            <span class="value-symbol value-sand" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg></span>
+            <span class="value-index">03</span>
+            <h3>Inclusion</h3>
+            <p>Encouraging communication without unnecessary barriers — in institutions, at work, in daily life.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="faq-section section-pad" id="faq">
+      <div class="container faq-layout">
+        <div class="faq-intro" data-reveal>
+          <span class="eyebrow"><span class="eyebrow-dot"></span> GOOD TO KNOW</span>
+          <h2>Questions?<br><em>We've got you.</em></h2>
+          <p>Here are a few things you might want to know about Ishara.</p>
+          <a class="text-link" href="mailto:hello@ishara.example">Get in touch <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="faq-list" data-reveal style="--d:90ms">
+          <details open><summary>What is Ishara?<span aria-hidden="true"></span></summary><p>Ishara — Arabic for “sign” — is a platform that connects deaf and hard-of-hearing people with accessible services, sign language interpreters, and learning opportunities, built for Algeria.</p></details>
+          <details><summary>Who can use the platform?<span aria-hidden="true"></span></summary><p>Individuals looking for accessible services or learning opportunities, interpreters, and organizations or professionals who want to make their services more accessible.</p></details>
+          <details><summary>How can I find an interpreter?<span aria-hidden="true"></span></summary><p>Visit the interpreter directory to explore available profiles — languages, locations and specializations — as this information becomes available.</p></details>
+          <details><summary>How can I register as a provider?<span aria-hidden="true"></span></summary><p>Choose <a href="#providers">Providers</a> in the navigation to see who providers are and what they offer, then choose “Join Us” to sign up.</p></details>
+          <details><summary>Are the courses suitable for beginners?<span aria-hidden="true"></span></summary><p>Yes — the learning area is designed to include beginner-friendly content and resources. Course details will be shown as they are published.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FINAL CTA ============ -->
+    <section class="final-cta section-pad" id="join">
+      <div class="container cta-inner">
+        <div class="cta-decoration" aria-hidden="true"><span></span><span></span><span></span></div>
+        <span class="eyebrow" data-reveal>YOUR PLACE IN A MORE INCLUSIVE WORLD</span>
+        <h2 data-reveal style="--d:70ms">Let's make communication <em>accessible.</em></h2>
+        <p data-reveal style="--d:130ms">Discover a more inclusive way to access services, connect with people, and learn.</p>
+        <div class="hero-actions" data-reveal style="--d:190ms">
+          <a class="btn btn-primary btn-lg" href="mailto:hello@ishara.example?subject=Getting%20started%20with%20Ishara">Get started <span aria-hidden="true">↗</span></a>
+          <a class="btn btn-outline btn-lg" href="#how-it-works">How it works</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-main">
+      <div class="footer-brand-col">
+        <a class="brand footer-brand" href="#home">
+          <img src="images/logo.png" alt="Ishara logo" class="footer-logo" width="54" height="54">
+          <span>Ishara</span>
+        </a>
+        <p>Making communication and access more inclusive, one connection at a time — in Algeria and beyond.</p>
+        <span class="footer-note">ACCESS • CONNECTION • INCLUSION</span>
+      </div>
+      <div class="footer-links">
+        <h3>Explore</h3>
+          <a href="#how-it-works">How it works</a>
+        <a href="#interpreters">Interpreters</a>
+        <a href="#courses">Courses</a>
+      </div>
+      <div class="footer-links">
+        <h3>Join Ishara</h3>
+        <a href="#providers">Providers</a>
+        <a href="../loginpage/login.html">Create an account</a>
+        <a href="#faq">FAQs</a>
+      </div>
+      <div class="footer-links">
+        <h3>Get in touch</h3>
+        <a href="mailto:hello@ishara.example">Contact us</a>
+        <a href="#join">Help &amp; support</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© <span id="year">2026</span> Ishara. All rights reserved.</span>
+      <div><a href="#privacy">Privacy policy</a><a href="#terms">Terms of service</a></div>
+      <a class="back-top" href="#home">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
