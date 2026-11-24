@@ -1,0 +1,603 @@
+/* ==========================================================
+   ISHARA – Request an interpreter (request.css)
+   Theme: warm cream background, ocean-blue primary, coral accent,
+   soft rounded cards, pastel status colours (same as Customer space)
+   ========================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap");
+
+/* ---------- Theme tokens ---------- */
+:root {
+    --bg: #faf6f1;
+    --surface: #ffffff;
+    --surface-soft: #fdfaf6;
+    --border: #eadfd5;
+    --border-soft: #f1e8df;
+
+    --text: #1f2a37;
+    --text-muted: #6b7280;
+
+    --primary: #1b6a9c;
+    --primary-dark: #14557f;
+    --primary-soft: #dcebf4;
+
+    --accent: #e8705a;
+    /* coral – tab underline, highlights */
+    --accent-soft: #fde6df;
+    --accent-text: #b4472f;
+
+    --pending-bg: #fdf1c9;
+    --pending-text: #8a6a00;
+    --accepted-bg: #dcf3e4;
+    --accepted-text: #1f7a43;
+    --declined-bg: #fde0e0;
+    --declined-text: #b42b2b;
+    --cancelled-bg: #eeeeea;
+    --cancelled-text: #6b6b66;
+
+    --radius-sm: 10px;
+    --radius: 16px;
+    --radius-pill: 999px;
+
+    --shadow: 0 2px 10px rgba(80, 55, 30, 0.07);
+    --shadow-hover: 0 6px 18px rgba(80, 55, 30, 0.12);
+    --focus: 0 0 0 3px rgba(27, 106, 156, 0.25);
+}
+
+/* ---------- Base ---------- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 32px 24px 48px;
+    font-family: "Nunito", "Segoe UI", system-ui, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--text);
+    background: var(--bg);
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+    line-height: 1.25;
+}
+
+/* ---------- Page header ---------- */
+.container {
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.site-header {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border-soft);
+    box-shadow: var(--shadow);
+}
+
+.site-header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--accent);
+}
+
+.logo:hover {
+    color: var(--primary-dark);
+}
+
+/* ---------- Layout: form + aside ---------- */
+main {
+    max-width: 1080px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 320px;
+    gap: 24px;
+    align-items: start;
+}
+
+/* ---------- Form card ---------- */
+article {
+    background: var(--surface);
+    border: 1px solid var(--border-soft);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 28px;
+}
+
+article form {
+    margin: 0;
+}
+
+#request_an_interpreter {
+    background: var(--primary-dark);
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(27, 106, 156, 0.3);
+    border-radius: 8px;
+    display: inline;
+    padding: px;
+
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    min-width: 0;
+}
+
+/* Legends used as section blocks: floated so they behave like normal divs */
+legend {
+    float: left;
+    width: 100%;
+    padding: 0 0 24px;
+    margin: 0 0 24px;
+    border-bottom: 1px solid var(--border-soft);
+}
+
+legend:last-of-type {
+    border-bottom: 0;
+    margin-bottom: 0;
+    padding-bottom: 8px;
+}
+
+legend h2 {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+    font-size: 18px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+/* Numbered badges */
+legend h2 span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--accent-soft);
+    color: var(--accent-text);
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 0;
+}
+
+/* ---------- Fields ---------- */
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 16px;
+    max-width: 360px;
+}
+
+label {
+    font-weight: 700;
+    font-size: 14px;
+}
+
+input[type="date"],
+input[type="time"],
+input[type="text"],
+input:not([type]),
+input[list] {
+    width: 100%;
+    padding: 11px 14px;
+    font: inherit;
+    color: var(--text);
+    background: var(--surface-soft);
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius-sm);
+    transition: border-color 0.15s, box-shadow 0.15s, background 0.15s;
+}
+
+input[type="date"]:hover,
+input[type="time"]:hover,
+input[type="text"]:hover,
+input[list]:hover {
+    border-color: #d6c6b6;
+}
+
+input[type="date"]:focus,
+input[type="time"]:focus,
+input[type="text"]:focus,
+input[list]:focus {
+    outline: none;
+    background: var(--surface);
+    border-color: var(--primary);
+    box-shadow: var(--focus);
+}
+
+/* ---------- Captions (helper text) ---------- */
+caption {
+    display: block;
+    margin: 4px 0 12px;
+    font-size: 13px;
+    color: var(--text-muted);
+    text-align: left;
+    caption-side: unset;
+}
+
+/* ---------- Radio / checkbox accents ---------- */
+input[type="radio"],
+input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin: 0;
+    accent-color: var(--primary);
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+/* ---------- WHERE: selectable cards ---------- */
+.in_person,
+.remote {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    column-gap: 12px;
+    margin-bottom: 12px;
+    padding: 14px 16px;
+    background: var(--surface-soft);
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius);
+    transition: border-color 0.15s, box-shadow 0.15s, background 0.15s;
+}
+
+.in_person label,
+.remote label {
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.in_person input,
+.remote input {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+}
+
+.in_person caption,
+.remote caption {
+    grid-column: 1;
+    margin: 0;
+}
+
+.in_person:hover,
+.remote:hover {
+    border-color: var(--primary);
+    box-shadow: var(--shadow);
+}
+
+.in_person:has(input:checked),
+.remote:has(input:checked) {
+    background: var(--primary-soft);
+    border-color: var(--primary);
+}
+
+/* ---------- PURPOSE: two-column choices ---------- */
+.purpose,
+.right {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.purpose .left {
+    display: none;
+}
+
+.purpose input[type="radio"],
+.right input[type="radio"] {
+    margin: 0;
+}
+
+.purpose label,
+.right label {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    min-height: 45px;
+    padding: 10px 12px;
+
+    background-color: #FFFEFC;
+    border: 1px solid var(--color-border);
+    border-radius: 9px;
+
+    font-size: 13px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.purpose label:hover,
+.right label:hover {
+    border-color: var(--color-accent);
+    background-color: #599191;
+}
+
+.purpose label.selected,
+.right label.selected {
+    background-color: var(--primary-soft);
+    border-color: var(--primary);
+    color: var(--primary-dark);
+    font-weight: 700;
+}
+
+
+/* 10. COMMUNICATION PREFERENCES */
+
+.help {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.help h4 {
+    margin: 8px 0 2px;
+    color: var(--color-primary);
+    font-size: 14px;
+}
+
+.help input[type="checkbox"] {
+    margin: 0;
+}
+
+.help label {
+
+    cursor: pointer;
+    transition: 0.2s;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    column-gap: 12px;
+    margin-bottom: 12px;
+    padding: 14px 16px;
+    background: var(--surface-soft);
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius);
+    transition: border-color 0.15s, box-shadow 0.15s, background 0.15s;
+}
+
+.help label:hover {
+    background-color: #F3FAFA;
+    border-style: ridge;
+    border-color: #F3FAFA;
+}
+
+#additional {
+    margin-top: 5px;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 28px 12px 0 0;
+    padding: 12px 24px;
+    font: inherit;
+    font-weight: 800;
+    border-radius: var(--radius-pill);
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: background 0.15s, box-shadow 0.15s, transform 0.1s, border-color 0.15s;
+}
+
+.btn:focus-visible {
+    outline: none;
+    box-shadow: var(--focus);
+}
+
+.btn:active {
+    transform: translateY(1px);
+}
+
+#review_btn {
+    background: var(--primary);
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(27, 106, 156, 0.3);
+}
+
+#review_btn:hover {
+    background: var(--primary-dark);
+}
+
+#cancel_btn {
+    background: transparent;
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+#cancel_btn:hover {
+    background: var(--primary-soft);
+}
+
+/* ---------- Aside ---------- */
+aside {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    position: sticky;
+    top: 24px;
+}
+
+.interpreter_info,
+.privacy {
+    background: var(--surface);
+    border: 1px solid var(--border-soft);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 20px;
+}
+
+.interpreter_info p,
+.privacy p {
+    margin: 0 0 8px;
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+.interpreter_info h3,
+.privacy h3 {
+    margin-bottom: 8px;
+    font-size: 17px;
+    font-weight: 800;
+    color: var(--text);
+}
+
+/* Status chips: 1st = verified, 2nd = not verified (show one with JS) */
+.interpreter_info p:nth-of-type(3),
+.interpreter_info p:nth-of-type(4) {
+    display: inline-block;
+    margin: 4px 6px 0 0;
+    padding: 3px 12px;
+    border-radius: var(--radius-pill);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.interpreter_info p:nth-of-type(3) {
+    background: var(--accepted-bg);
+    color: var(--accepted-text);
+    border: solid var(--accepted-text) 1.5px;
+    padding: 6px;
+
+}
+
+.interpreter_info p:nth-of-type(4) {
+    background: hsl(0, 33%, 91%);
+    color: #d60f0f;
+    border: solid #d60f0f 1.5px;
+    padding: 6px;
+}
+
+/* Privacy card uses the soft info-blue like the "How request statuses work" box */
+.privacy {
+    background: var(--primary-soft);
+    border-color: transparent;
+    box-shadow: none;
+}
+
+.privacy h3 {
+    color: var(--primary-dark);
+}
+
+.privacy p {
+    color: #3b5568;
+}
+
+/* ---------- Footer ---------- */
+footer {
+    max-width: 1080px;
+    margin: 32px auto 0;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 13px;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 860px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    aside {
+        position: static;
+    }
+}
+
+@media (max-width: 560px) {
+    body {
+        padding: 20px 14px 40px;
+    }
+
+    article {
+        padding: 20px;
+    }
+
+    #purpose {
+        grid-template-columns: 1fr;
+    }
+
+    .field {
+        max-width: none;
+    }
+
+    .btn {
+        width: 100%;
+        margin-right: 0;
+    }
+}
+
+.error-message {
+    margin: 4px 0 0;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--declined-text);
+}
+
+input.invalid {
+    border-color: #d60f0f;
+    background: var(--declined-bg);
+}
+
+.topbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between; /* brand left, avatar far right */
+    align-items: center;
+    padding: 8px 20px;
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.brand {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #0c1745;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    user-select: none;
+}

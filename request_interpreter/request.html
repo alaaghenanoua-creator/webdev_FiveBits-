@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="request.css">
+     <link rel="stylesheet" href="sign_up.css">
+    <script src="request.js" defer></script>
+
+</head>
+
+<body>
+      <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="logo" href="#" aria-label="ISHARA home">ishara<span>.</span></a>
+      <a class="btn btn--ghost" href="#">Sign in</a>
+    </div>
+  </header>
+    <main>
+        <article>
+            <form action="https://request.exe/post" methos="post" enctype="multipart/form-data">
+                <fieldset>
+                    <legend id="When">
+                        <h2><span id="first">1 </span> WHEN</h2>
+
+                        <div class="field">
+                            <label for="Date">Date :</label>
+                            <input type="date" id="Date" name="date" placeholder="dd/mm/yyyy">
+                        </div>
+                        <div class="field">
+                            <label for="start_time">Start Time:</label>
+                            <input type="TIME" id="start_time" name="atert_time">
+                        </div>
+                        <div class="field">
+                            <label for="expected_duration">Expected Duration:</label>
+                            <input id="expected_duration" name="duration" list="durations">
+                            <datalist id="durations">
+                                <option value="30 minutes">
+                                <option value="1 hour">
+                                <option value="2 hours">
+                                <option value="5 hours">
+                                <option value="half day">
+                                <option value="one day">
+                                </datalist>
+                        </div>
+
+                    </legend>
+                    <legend id="Where">
+                        <h2><span id="second">2 </span> WHERE</h2>
+                        <div class="in_person">
+                            <label for="in_person">In Person</label>
+                            <input type="radio" name="where" id="in_person">
+                            <caption>The interpreter comes to you</caption>
+
+                        </div>
+                        <div class="remote">
+
+                            <label for="remote">Remote (video call)</label>
+                            <input type="radio" name="where" id="remote">
+                            <caption>You get a video link after the accept</caption>
+
+                        </div>
+                    </legend>
+
+                    <legend id="purpose">
+                        <h2><span id="sthird">2 </span> Purpose</h2>
+                        <caption>Choose a general category only.Please don't include diagnoses, case numbers or other
+                            personal
+                            details</caption>
+                        <div class="purpose">
+
+                            <div class="left"></div>
+                            <input type="radio" name="purpose" id="medical_appointemetn">
+                            <label for="medical_appointemetn">Medical appointment</label>
+                            <input type="radio" name="purpose" id="education">
+                            <label for="education">Education</label>
+                            <input type="radio" name="purpose" id="public_service">
+                            <label for="public_service">Public service</label>
+                            <input type="radio" name="purpose" id="other">
+                            <label for="other">Other</label>
+                        </div>
+                        <div class="right">
+                            <input type="radio" name="purpose" id="legal_administrative">
+                            <label for="legal_administrative">Legal or administrarive</label>
+                            <input type="radio" name="purpose" id="employement_interview">
+                            <label for="employement_interview">Employement or interview</label>
+                            <input type="radio" name="purpose" id="family_personal_events">
+                            <label for="family_personal_events">Family or personal event</label>
+
+                        </div>
+
+                        </div>
+                    </legend>
+
+                    <legend id="communiction_preferences">
+                        <h2><span id="fourth">4 </span> Communication preferences</h2>
+                        <div class="help">
+
+                            <h4>Anything that helps ?</h4>
+                            <input type="checkbox" name="deaf_interpreter" id="deaf_interpreter">
+                            <label for="deaf_interpreter">A Deaf interpreter is preferred</label>
+                            <input type="checkbox" name="tactile_signing" id="tactile_signing">
+                            <label for="tactile_signing">Tactile signing</label>
+                            <input type="checkbox" name="lip_reading" id="lip_reading">
+                            <label for="lip_reading">Lip_reading support</label>
+                            <input type="checkbox" name="written_backup" id="written_backup">
+                            <label for="written_backup">Written backup (note or text)</label>
+                            <h4>Additional informtion</h4>
+                            <caption>For example: "It's a group meeting with 6 people." Please don;t include medical or
+                                legal details.</caption>
+                            <input type="text" id="additional">
+
+
+                        </div>
+                    </legend>
+
+                </fieldset>
+            </form>
+            <button id="review_btn" class="btn">Review request</button>
+            <button id="cancel_btn" class="btn">Cancel</button>
+        </article>
+
+        <aside>
+            <div class="interpreter_info">
+                <p>Your request goes to</p>
+                <h3>Intrepreter_firstname_lastname</h3>
+                <p>Sign-language interpreter. Country</p>
+                <p>Verified</p>
+                <p>Not verified</p>
+            </div>
+            <div class="privacy">
+                <h3>Your privacy</h3>
+                <p>Only the interpreter and ISHARA administrators can see this request</p>
+                <p>Your exact address is shared only after he accepts.</p>
+                <p>You can camcel at any time from your dashboard.</p>
+            </div>
+
+
+
+        </aside>
+
+
+
+    </main>
+    <footer>
+
+    </footer>
+
+
+  
+</body>
+
+</html>

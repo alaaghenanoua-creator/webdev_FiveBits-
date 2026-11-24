@@ -1,0 +1,899 @@
+/* ==========================================================================
+   ISHARA — Design System / Theme
+   "Warm Calm" — ivory & beige surfaces, muted salmon accents, trust-blue
+   primary. Built for the ISHARA accessibility platform (frontend-first).
+   --------------------------------------------------------------------------
+   HOW TO USE THIS FILE
+   1. Link it on EVERY page:  <link rel="stylesheet" href="css/theme.css">
+   2. Use the class names documented in components.html.
+   3. Change colors ONLY in :root below — the whole site updates at once.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. DESIGN TOKENS (CSS custom properties)
+   -------------------------------------------------------------------------- */
+:root {
+    /* --- Color: neutrals (warm) --- */
+    --ink: #2b2420;
+    /* main text — dark warm brown            */
+    --ink-soft: #6e6157;
+    /* secondary text                          */
+    --ink-faint: #9c8f84;
+    /* placeholders, timestamps                */
+    --bg: #faf6f0;
+    /* page background — ivory                 */
+    --bg-2: #f1e9de;
+    /* alternate background — warm beige       */
+    --surface: #ffffff;
+    /* cards, forms, tables                    */
+    --line: #e6dcd0;
+    /* borders, dividers                       */
+    --line-soft: #efe7dc;
+
+    /* --- Color: brand blue (trust, primary actions) --- */
+    --brand-900: #143d59;
+    --brand-700: #1c5a80;
+    --brand-600: #2274a5;
+    /* PRIMARY buttons, links                  */
+    --brand-500: #3a8bb8;
+    --brand-100: #daebf4;
+    --brand-50: #edf5f9;
+
+    /* --- Color: salmon / peach (ISHARA warmth, secondary accent) --- */
+    --peach-700: #a9543c;
+    /* peach text (AA on ivory)                */
+    --peach-600: #c96f52;
+    --peach-500: #e08a6d;
+    --peach-300: #f2c1ac;
+    --peach-100: #fae7dc;
+    --peach-50: #fcf1ea;
+
+    /* --- Color: status palette (icon + label always, never color alone) --- */
+    --st-pending-fg: #8a6d1f;
+    --st-pending-bg: #f9efd3;
+    --st-pending-line: #e8d9a8;
+    --st-accepted-fg: #256b45;
+    --st-accepted-bg: #dcefe2;
+    --st-accepted-line: #b8dcc6;
+    --st-declined-fg: #a63d33;
+    --st-declined-bg: #f8e1dd;
+    --st-declined-line: #ecc7c1;
+    --st-cancelled-fg: #6b655e;
+    --st-cancelled-bg: #ebe7e1;
+    --st-cancelled-line: #d9d2c9;
+    --st-completed-fg: #1f6b6b;
+    --st-completed-bg: #dbeeea;
+    --st-completed-line: #b5dcd8;
+    --st-verified-fg: #1c5a80;
+    --st-verified-bg: #daebf4;
+    --st-verified-line: #b6d5e6;
+
+    /* --- Color: feedback --- */
+    --ok: #256b45;
+    --ok-bg: #dcefe2;
+    --error: #a63d33;
+    --error-bg: #f8e1dd;
+    --info: #1c5a80;
+    --info-bg: #daebf4;
+
+    /* --- Typography --- */
+    --font-body: "Nunito Sans", "Segoe UI", Tahoma, Arial, sans-serif;
+    --fs-xs: .75rem;
+    /* 12px  */
+    --fs-sm: .875rem;
+    /* 14px  */
+    --fs-md: 1rem;
+    /* 16px  */
+    --fs-lg: 1.25rem;
+    /* 20px  */
+    --fs-xl: 1.5rem;
+    /* 24px  */
+    --fs-2xl: 2rem;
+    /* 32px  */
+    --lh-tight: 1.2;
+    --lh-body: 1.6;
+
+    /* --- Spacing scale (use multiples of 4px) --- */
+    --sp-1: .25rem;
+    --sp-2: .5rem;
+    --sp-3: .75rem;
+    --sp-4: 1rem;
+    --sp-5: 1.5rem;
+    --sp-6: 2rem;
+    --sp-7: 3rem;
+
+    /* --- Shape & elevation --- */
+    --radius-sm: 8px;
+    --radius: 12px;
+    --radius-lg: 16px;
+    --shadow-1: 0 1px 2px rgba(43, 36, 32, .05), 0 2px 8px rgba(43, 36, 32, .05);
+    --shadow-2: 0 2px 6px rgba(43, 36, 32, .07), 0 12px 32px rgba(43, 36, 32, .10);
+
+    /* --- Focus ring (accessibility: ALWAYS visible) --- */
+    --ring: 0 0 0 3px rgba(34, 116, 165, .45);
+
+    /* --- Motion --- */
+    --speed: 160ms;
+}
+
+/* --------------------------------------------------------------------------
+   2. RESET & BASE
+   -------------------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* The hidden attribute must ALWAYS win, even over .btn display rules */
+[hidden] {
+    display: none !important;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-body);
+    font-size: var(--fs-md);
+    line-height: var(--lh-body);
+    color: var(--ink);
+    background: var(--bg);
+    -webkit-font-smoothing: antialiased;
+}
+
+img,
+svg {
+    max-width: 100%;
+    display: block;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    line-height: var(--lh-tight);
+    margin: 0 0 var(--sp-3);
+    font-weight: 800;
+}
+
+h1 {
+    font-size: var(--fs-2xl);
+}
+
+h2 {
+    font-size: var(--fs-xl);
+}
+
+h3 {
+    font-size: var(--fs-lg);
+}
+
+h4 {
+    font-size: var(--fs-md);
+}
+
+p {
+    margin: 0 0 var(--sp-4);
+}
+
+a {
+    color: var(--brand-600);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+}
+
+a:hover {
+    color: var(--brand-700);
+}
+
+ul,
+ol {
+    margin: 0 0 var(--sp-4);
+    padding-left: 1.25rem;
+}
+
+/* Keyboard focus — visible on EVERY interactive element */
+:focus-visible {
+    outline: none;
+    box-shadow: var(--ring);
+    border-radius: var(--radius-sm);
+}
+
+/* Skip link — first Tab press reveals it */
+.skip-link {
+    position: absolute;
+    left: var(--sp-4);
+    top: -100px;
+    background: var(--brand-700);
+    color: #fff;
+    padding: var(--sp-2) var(--sp-4);
+    border-radius: var(--radius-sm);
+    z-index: 200;
+    transition: top var(--speed);
+}
+
+.skip-link:focus {
+    top: var(--sp-4);
+    color: #fff;
+}
+
+/* Screen-reader-only helper */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+/* --------------------------------------------------------------------------
+   3. TYPOGRAPHY HELPERS
+   -------------------------------------------------------------------------- */
+.micro-label {
+    font-size: var(--fs-xs);
+    font-weight: 800;
+    letter-spacing: .09em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+}
+
+.muted {
+    color: var(--ink-soft);
+}
+
+.faint {
+    color: var(--ink-faint);
+    font-size: var(--fs-sm);
+}
+
+.lead {
+    font-size: var(--fs-lg);
+    color: var(--ink-soft);
+}
+
+.num {
+    font-variant-numeric: tabular-nums;
+}
+
+.text-brand {
+    color: var(--brand-700);
+}
+
+.text-peach {
+    color: var(--peach-700);
+}
+
+/* --------------------------------------------------------------------------
+   4. BUTTONS
+   -------------------------------------------------------------------------- */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--sp-2);
+    font: inherit;
+    font-weight: 700;
+    font-size: var(--fs-sm);
+    padding: .625rem 1.15rem;
+    border-radius: 999px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background var(--speed), border-color var(--speed),
+        color var(--speed), transform var(--speed);
+}
+
+.btn:active {
+    transform: translateY(1px);
+}
+
+.btn:disabled {
+    opacity: .55;
+    cursor: not-allowed;
+}
+
+.btn-primary {
+    background: var(--brand-600);
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background: var(--brand-700);
+    color: #fff;
+}
+
+.btn-peach {
+    background: var(--peach-600);
+    color: #fff;
+}
+
+.btn-peach:hover {
+    background: var(--peach-700);
+    color: #fff;
+}
+
+.btn-outline {
+    background: var(--surface);
+    color: var(--brand-700);
+    border-color: var(--brand-600);
+}
+
+.btn-outline:hover {
+    background: var(--brand-50);
+}
+
+.btn-ghost {
+    background: transparent;
+    color: var(--ink-soft);
+}
+
+.btn-ghost:hover {
+    background: var(--bg-2);
+    color: var(--ink);
+}
+
+.btn-danger {
+    background: var(--surface);
+    color: var(--error);
+    border-color: var(--error);
+}
+
+.btn-danger:hover {
+    background: var(--error-bg);
+}
+
+.btn-sm {
+    padding: .35rem .8rem;
+    font-size: var(--fs-xs);
+}
+
+.btn-lg {
+    padding: .8rem 1.6rem;
+    font-size: var(--fs-md);
+}
+
+.btn-block {
+    width: 100%;
+}
+
+/* --------------------------------------------------------------------------
+   5. STATUS PILLS — icon + text + color (never color alone!)
+   -------------------------------------------------------------------------- */
+.status {
+    display: inline-flex;
+    align-items: center;
+    gap: .4em;
+    font-size: var(--fs-xs);
+    font-weight: 800;
+    letter-spacing: .02em;
+    padding: .28em .8em;
+    border-radius: 999px;
+    border: 1px solid transparent;
+    white-space: nowrap;
+}
+
+.status::before {
+    font-size: 1em;
+    line-height: 1;
+}
+
+.status-pending {
+    background: var(--st-pending-bg);
+    color: var(--st-pending-fg);
+    border-color: var(--st-pending-line);
+}
+
+.status-pending::before {
+    content: "\231B";
+}
+
+/* hourglass */
+.status-accepted {
+    background: var(--st-accepted-bg);
+    color: var(--st-accepted-fg);
+    border-color: var(--st-accepted-line);
+}
+
+.status-accepted::before {
+    content: "\2713";
+}
+
+/* check     */
+.status-declined {
+    background: var(--st-declined-bg);
+    color: var(--st-declined-fg);
+    border-color: var(--st-declined-line);
+}
+
+.status-declined::before {
+    content: "\2715";
+}
+
+/* cross     */
+.status-cancelled {
+    background: var(--st-cancelled-bg);
+    color: var(--st-cancelled-fg);
+    border-color: var(--st-cancelled-line);
+}
+
+.status-cancelled::before {
+    content: "\2298";
+}
+
+/* circled slash */
+.status-completed {
+    background: var(--st-completed-bg);
+    color: var(--st-completed-fg);
+    border-color: var(--st-completed-line);
+}
+
+.status-completed::before {
+    content: "\2605";
+}
+
+/* star      */
+.status-verified {
+    background: var(--st-verified-bg);
+    color: var(--st-verified-fg);
+    border-color: var(--st-verified-line);
+}
+
+.status-verified::before {
+    content: "\2713";
+}
+
+/* Small tags / chips (services, languages) */
+.chip {
+    display: inline-flex;
+    align-items: center;
+    font-size: var(--fs-xs);
+    font-weight: 700;
+    padding: .25em .75em;
+    border-radius: 999px;
+    background: var(--peach-100);
+    color: var(--peach-700);
+}
+
+.chip-blue {
+    background: var(--brand-50);
+    color: var(--brand-700);
+}
+
+/* --------------------------------------------------------------------------
+   6. CARDS & PANELS
+   -------------------------------------------------------------------------- */
+.card {
+    background: var(--surface);
+    border: 1px solid var(--line-soft);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-1);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--sp-3);
+    padding: var(--sp-4) var(--sp-5);
+    border-bottom: 1px solid var(--line-soft);
+}
+
+.card-header h3 {
+    margin: 0;
+}
+
+.card-body {
+    padding: var(--sp-5);
+}
+
+.card-footer {
+    padding: var(--sp-4) var(--sp-5);
+    border-top: 1px solid var(--line-soft);
+}
+
+/* --------------------------------------------------------------------------
+   7. FORMS
+   -------------------------------------------------------------------------- */
+.field {
+    margin-bottom: var(--sp-4);
+}
+
+.field label {
+    display: block;
+    font-weight: 700;
+    font-size: var(--fs-sm);
+    margin-bottom: var(--sp-1);
+}
+
+.field .hint {
+    font-size: var(--fs-xs);
+    color: var(--ink-soft);
+    margin-top: .3em;
+}
+
+.required::after {
+    content: " *";
+    color: var(--peach-700);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="time"],
+input[type="search"],
+input[type="password"],
+input[type="number"],
+input[type="url"],
+select,
+textarea {
+    width: 100%;
+    font: inherit;
+    font-size: var(--fs-sm);
+    color: var(--ink);
+    background: var(--surface);
+    border: 1.5px solid var(--line);
+    border-radius: var(--radius-sm);
+    padding: .6rem .8rem;
+    transition: border-color var(--speed), box-shadow var(--speed);
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: var(--ink-faint);
+}
+
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    border-color: var(--brand-600);
+    box-shadow: var(--ring);
+    outline: none;
+}
+
+textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+/* Inline validation states */
+.field-error input,
+.field-error select,
+.field-error textarea {
+    border-color: var(--error);
+}
+
+.error-message {
+    display: none;
+    font-size: var(--fs-xs);
+    font-weight: 700;
+    color: var(--error);
+    margin-top: .3em;
+}
+
+.field-error .error-message {
+    display: block;
+}
+
+fieldset {
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: var(--sp-4);
+    margin: 0 0 var(--sp-4);
+}
+
+legend {
+    font-weight: 800;
+    font-size: var(--fs-sm);
+    padding: 0 var(--sp-2);
+}
+
+/* Checkbox / radio rows */
+.check-row {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-2);
+    margin-bottom: var(--sp-2);
+}
+
+.check-row label {
+    font-weight: 600;
+    font-size: var(--fs-sm);
+    margin: 0;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    width: 1.05rem;
+    height: 1.05rem;
+    accent-color: var(--brand-600);
+}
+
+/* --------------------------------------------------------------------------
+   8. TABLES
+   -------------------------------------------------------------------------- */
+.table-wrap {
+    overflow-x: auto;
+    border-radius: var(--radius-lg);
+}
+
+table.table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--surface);
+    font-size: var(--fs-sm);
+}
+
+.table th {
+    text-align: left;
+    font-size: var(--fs-xs);
+    font-weight: 800;
+    letter-spacing: .07em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    background: var(--bg-2);
+    padding: .7rem .9rem;
+    border-bottom: 2px solid var(--line);
+    white-space: nowrap;
+}
+
+.table td {
+    padding: .75rem .9rem;
+    border-bottom: 1px solid var(--line-soft);
+    vertical-align: middle;
+}
+
+.table tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+.table tbody tr:hover {
+    background: var(--peach-50);
+}
+
+.table .actions {
+    display: flex;
+    gap: var(--sp-2);
+    justify-content: flex-end;
+}
+
+/* --------------------------------------------------------------------------
+   9. ALERTS & BANNERS
+   -------------------------------------------------------------------------- */
+.alert {
+    display: flex;
+    gap: var(--sp-3);
+    align-items: flex-start;
+    padding: var(--sp-4);
+    border-radius: var(--radius);
+    font-size: var(--fs-sm);
+    border: 1px solid transparent;
+    margin-bottom: var(--sp-4);
+}
+
+.alert strong {
+    display: block;
+    margin-bottom: .15em;
+}
+
+.alert p {
+    margin: 0;
+}
+
+.alert-info {
+    background: var(--info-bg);
+    color: var(--info);
+    border-color: var(--brand-100);
+}
+
+.alert-success {
+    background: var(--ok-bg);
+    color: var(--ok);
+    border-color: #b8dcc6;
+}
+
+.alert-warn {
+    background: var(--st-pending-bg);
+    color: var(--st-pending-fg);
+    border-color: var(--st-pending-line);
+}
+
+.alert-error {
+    background: var(--error-bg);
+    color: var(--error);
+    border-color: #ecc7c1;
+}
+
+/* --------------------------------------------------------------------------
+   10. TOASTS (action feedback)
+   -------------------------------------------------------------------------- */
+.toast-region {
+    position: fixed;
+    bottom: var(--sp-4);
+    right: var(--sp-4);
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-2);
+    z-index: 300;
+    max-width: min(360px, calc(100vw - 2rem));
+}
+
+.toast {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--sp-2);
+    background: var(--ink);
+    color: #fdfbf8;
+    border-radius: var(--radius);
+    padding: .8rem 1rem;
+    box-shadow: var(--shadow-2);
+    font-size: var(--fs-sm);
+    font-weight: 600;
+    animation: toast-in 220ms ease-out;
+    border-left: 4px solid var(--peach-500);
+}
+
+.toast-success {
+    border-left-color: #6fbf8f;
+}
+
+.toast-error {
+    border-left-color: #e08a80;
+}
+
+@keyframes toast-in {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   11. DIALOG (native <dialog>) & OVERLAYS
+   -------------------------------------------------------------------------- */
+dialog {
+    border: 0;
+    padding: 0;
+    border-radius: var(--radius-lg);
+    background: var(--surface);
+    color: var(--ink);
+    box-shadow: var(--shadow-2);
+    width: min(560px, calc(100vw - 2rem));
+}
+
+dialog::backdrop {
+    background: rgba(43, 36, 32, .45);
+}
+
+dialog .card-header {
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+
+dialog .card-body {
+    padding: var(--sp-5);
+}
+
+.detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--sp-3) var(--sp-5);
+}
+
+.detail-grid dt {
+    font-size: var(--fs-xs);
+    font-weight: 800;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+}
+
+.detail-grid dd {
+    margin: .15em 0 0;
+    font-weight: 600;
+}
+
+/* --------------------------------------------------------------------------
+   12. AVATARS & BADGES
+   -------------------------------------------------------------------------- */
+.avatar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: var(--brand-100);
+    color: var(--brand-700);
+    font-weight: 800;
+    font-size: var(--fs-sm);
+    flex: none;
+}
+
+.avatar-peach {
+    background: var(--peach-100);
+    color: var(--peach-700);
+}
+
+.avatar-lg {
+    width: 72px;
+    height: 72px;
+    font-size: var(--fs-xl);
+}
+
+.person {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-3);
+    min-width: 0;
+}
+
+.person .name {
+    font-weight: 800;
+    line-height: 1.25;
+}
+
+.person .sub {
+    font-size: var(--fs-xs);
+    color: var(--ink-soft);
+}
+
+/* Rating stars (reviews) */
+.stars {
+    color: var(--peach-600);
+    letter-spacing: .1em;
+    font-size: var(--fs-sm);
+}
+
+/* --------------------------------------------------------------------------
+   13. EMPTY STATE
+   -------------------------------------------------------------------------- */
+.empty {
+    text-align: center;
+    padding: var(--sp-7) var(--sp-5);
+    color: var(--ink-soft);
+}
+
+.empty .glyph {
+    font-size: 2rem;
+    margin-bottom: var(--sp-2);
+}
+
+.empty h4 {
+    color: var(--ink);
+    margin-bottom: var(--sp-1);
+}
+
+.empty p {
+    font-size: var(--fs-sm);
+    margin: 0 auto;
+    max-width: 42ch;
+}
+
+/* --------------------------------------------------------------------------
+   14. REDUCED MOTION (accessibility)
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+    }
+}
