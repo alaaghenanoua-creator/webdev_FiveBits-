@@ -1,186 +1,127 @@
-(() => {
+/* signup-combined.js — role step -> details step inside one card (no page change). */
+(function () {
   'use strict';
 
-  const form = document.getElementById('details-form');
-  if (!form) return;
+  var TITLES = {
+    customer:    'Your details',
+    interpreter: 'Your details · Interpreter',
+    provider:    'Your details · Service provider',
+    teacher:     'Your details · Teacher'
+  };
 
-  form.noValidate = true; // we show our own accessible messages instead of browser bubbles
+  var panelRoles   = document.getElementById('panel-roles');
+  var panelDetails = document.getElementById('panel-details');
+  var form         = document.getElementById('details-form');
+  var roleInput    = document.getElementById('role-input');
+  var title        = document.getElementById('step2-title');
+  var summary      = form.querySelector('.error-summary');
+  var groups       = form.querySelectorAll('.role-fields');
 
-  const summary = form.querySelector('.error-summary');
-  const fields = [...form.querySelectorAll('input:not([type="hidden"]), select, textarea')];
+  /* ---------- Step switching (uses the URL hash so the browser Back button works) ---------- */
+  function showRole(role) {
+    if (!TITLES[role]) { showRoles(); return; }
 
-  const errorEl = (el) => form.querySelector(`[data-error-for="${el.id}"]`);
+    roleInput.value = role;
+    title.textContent = TITLES[role];
 
-  /* ---------- Validation rules: returns an error message or '' ---------- */
-  function getError(el) {
-    const value = el.value.trim();
-    const d = el.dataset;
+    groups.forEach(function (g) {
+      var on = g.dataset.role === role;
+      g.hidden = !on;
+      g.disabled = !on;            // disabled fields are skipped by validation AND not submitted
+    });
 
-    if (el.required && !value) {
-      return d.errorRequired || 'This field is required.';
-    }
-    if (!value) return '';
+    clearErrors();
+    panelRoles.hidden = true;
+    panelDetails.hidden = false;
+    form.querySelector('.panel-body').scrollTop = 0;
+    title.focus();
+  }
 
-    if (el.type === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
-      return d.errorEmail || 'Enter a valid email address, like name@example.com.';
+  function showRoles() {
+    panelDetails.hidden = true;
+    panelRoles.hidden = false;
+  }
+
+  function route() { showRole(location.hash.replace('#', '')); }
+
+  window.addEventListener('hashchange', route);
+  route();                                   // supports opening sign_up.html#teacher directly
+
+  document.getElementById('back-btn').addEventListener('click', function () {
+    if (location.hash) {
+      history.pushState('', document.title, location.pathname + location.search);
     }
-    if (el.minLength > 0 && el.value.length < el.minLength) {
-      return d.errorMin || `Enter at least ${el.minLength} characters.`;
-    }
-    if (el.type === 'number') {
-      const n = Number(value);
-      const min = el.min !== '' ? Number(el.min) : -Infinity;
-      const max = el.max !== '' ? Number(el.max) : Infinity;
-      if (Number.isNaN(n) || n < min || n > max) {
-        return d.errorRange || `Enter a number between ${el.min} and ${el.max}.`;
-      }
-    }
-    if (el.type === 'tel' && !/^[+\d][\d\s()-]{6,}$/.test(value)) {
-      return d.errorTel || 'Enter a valid phone number.';
-    }
-    if (d.match) {
-      const other = document.getElementById(d.match);
-      if (other && other.value !== el.value) {
-        return d.errorMatch || 'The values don\'t match.';
-      }
-    }
+    showRoles();
+    var first = panelRoles.querySelector('.role-card');
+    if (first) first.focus();
+  });
+
+  /* ---------- Show / hide password ---------- */
+  form.querySelector('.password-toggle').addEventListener('click', function () {
+    var input = document.getElementById('password');
+    var show = input.type === 'password';
+    input.type = show ? 'text' : 'password';
+    this.textContent = show ? 'Hide' : 'Show';
+    this.setAttribute('aria-pressed', String(show));
+    this.setAttribute('aria-label', show ? 'Hide password' : 'Show password');
+  });
+
+  /* ---------- Validation ---------- */
+  function errorEl(field) { return form.querySelector('[data-error-for="' + field.id + '"]'); }
+
+  function message(field) {
+    var v = field.value.trim();
+    if (field.required && !v) return field.dataset.errorRequired || 'This field is required.';
+    if (field.minLength > 0 && v && v.length < field.minLength)
+      return field.dataset.errorMin || 'Too short.';
+    if (field.dataset.match && v !== document.getElementById(field.dataset.match).value)
+      return field.dataset.errorMatch || 'Values do not match.';
+    if (v && !field.checkValidity())
+      return field.dataset.errorType || 'Check this value.';
     return '';
   }
 
-  /* ---------- Show / clear a single field's error ---------- */
-  function showFieldError(el, message) {
-    const err = errorEl(el);
-    if (message) {
-      el.setAttribute('aria-invalid', 'true');
-      if (err) {
-        err.textContent = message;
-        err.hidden = false;
-        err.id = err.id || `${el.id}-error`;
-        // keep any existing describedby (e.g. password hint) and add the error
-        const ids = new Set((el.getAttribute('aria-describedby') || '').split(' ').filter(Boolean));
-        ids.add(err.id);
-        el.setAttribute('aria-describedby', [...ids].join(' '));
-      }
-    } else {
-      el.removeAttribute('aria-invalid');
-      if (err) {
-        err.textContent = '';
-        err.hidden = true;
-        const ids = (el.getAttribute('aria-describedby') || '')
-          .split(' ')
-          .filter((id) => id && id !== err.id);
-        ids.length
-          ? el.setAttribute('aria-describedby', ids.join(' '))
-          : el.removeAttribute('aria-describedby');
-      }
-    }
+  function setError(field, msg) {
+    var p = errorEl(field);
+    if (msg) { field.setAttribute('aria-invalid', 'true'); }
+    else     { field.removeAttribute('aria-invalid'); }
+    if (p) { p.textContent = msg; p.hidden = !msg; }
   }
 
-  function validateField(el) {
-    const message = getError(el);
-    showFieldError(el, message);
-    return message;
+  function clearErrors() {
+    form.querySelectorAll('[aria-invalid]').forEach(function (f) { setError(f, ''); });
+    summary.hidden = true; summary.innerHTML = '';
   }
 
-  /* ---------- Error summary ---------- */
-  function renderSummary(errors) {
-    summary.replaceChildren();
-    if (!errors.length) {
-      summary.hidden = true;
-      return;
-    }
-    const title = document.createElement('p');
-    title.className = 'error-summary__title';
-    title.textContent = errors.length === 1
-      ? 'There is 1 problem with your details:'
-      : `There are ${errors.length} problems with your details:`;
+  function activeFields() {
+    return Array.prototype.filter.call(form.querySelectorAll('input:not([type=hidden]), select'),
+      function (f) { return !f.matches(':disabled'); });
+  }
 
-    const list = document.createElement('ul');
-    errors.forEach(({ el, message }) => {
-      const li = document.createElement('li');
-      const a = document.createElement('a');
-      a.href = `#${el.id}`;
-      a.textContent = message;
-      a.addEventListener('click', (e) => {
-        e.preventDefault();
-        el.focus();
-      });
-      li.appendChild(a);
-      list.appendChild(li);
+  form.addEventListener('submit', function (e) {
+    var bad = [];
+    activeFields().forEach(function (f) {
+      var msg = message(f);
+      setError(f, msg);
+      if (msg) bad.push(f);
     });
 
-    summary.append(title, list);
-    summary.hidden = false;
-  }
-
-  /* ---------- Submit ---------- */
-  form.addEventListener('submit', (e) => {
-    const errors = [];
-    fields.forEach((el) => {
-      const message = validateField(el);
-      if (message) errors.push({ el, message });
-    });
-
-    if (errors.length) {
+    if (bad.length) {
       e.preventDefault();
-      renderSummary(errors);
-      summary.focus();
-      return;
-    }
-
-    renderSummary([]);
-    // Valid: let the form post to register.php. Prevent double submits.
-    const btn = form.querySelector('button[type="submit"]');
-    if (btn) {
-      btn.disabled = true;
-      btn.textContent = 'Creating account…';
+      summary.hidden = false;
+      summary.textContent = bad.length === 1 ? 'Please fix 1 field below.' : 'Please fix ' + bad.length + ' fields below.';
+      bad[0].focus();
+      bad[0].scrollIntoView({ block: 'center' });
     }
   });
 
-  // Restore the button if the user comes back via the browser's back button
-  window.addEventListener('pageshow', () => {
-    const btn = form.querySelector('button[type="submit"]');
-    if (btn) {
-      btn.disabled = false;
-      btn.textContent = 'Create account';
-    }
+  // Clear a field's error as soon as the user fixes it
+  form.addEventListener('input', function (e) {
+    var f = e.target;
+    if (f.getAttribute('aria-invalid') === 'true' && !message(f)) setError(f, '');
   });
-
-  /* ---------- Live validation ---------- */
-  fields.forEach((el) => {
-    // Validate when leaving a field (but not while the user is still typing)
-    el.addEventListener('blur', () => {
-      if (el.value !== '' || el.getAttribute('aria-invalid')) validateField(el);
-    });
-
-    // Once a field is flagged, clear the error as soon as it becomes valid
-    const recheck = () => {
-      if (el.getAttribute('aria-invalid') === 'true') validateField(el);
-    };
-    el.addEventListener('input', recheck);
-    el.addEventListener('change', recheck);
-  });
-
-  // If the password changes, re-check the confirmation field
-  const password = document.getElementById('password');
-  const confirm = document.getElementById('confirm');
-  if (password && confirm) {
-    password.addEventListener('input', () => {
-      if (confirm.value) validateField(confirm);
-    });
-  }
-
-  /* ---------- Show / hide password ---------- */
-  document.querySelectorAll('.password-toggle').forEach((btn) => {
-    const input = document.getElementById(btn.getAttribute('aria-controls'));
-    if (!input) return;
-
-    btn.addEventListener('click', () => {
-      const show = input.type === 'password';
-      input.type = show ? 'text' : 'password';
-      btn.textContent = show ? 'Hide' : 'Show';
-      btn.setAttribute('aria-pressed', String(show));
-      btn.setAttribute('aria-label', show ? 'Hide password' : 'Show password');
-    });
+  form.addEventListener('change', function (e) {
+    var f = e.target;
+    if (f.getAttribute('aria-invalid') === 'true' && !message(f)) setError(f, '');
   });
 })();
